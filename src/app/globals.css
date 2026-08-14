@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-maroon: #4a0e18;
+  --color-maroon-deep: #2d0810;
+  --color-saffron: #c45c26;
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8d48b;
+  --color-cream: #f7f0e4;
+  --color-ivory: #fbf7ef;
+  --color-ink: #1c1210;
+  --color-peacock: #1a3d3a;
+  --color-lotus: #b85c6a;
+  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-outfit);
+  --font-deva: var(--font-deva);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-ivory);
+  color: var(--color-ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-gold) 55%, transparent);
+  color: var(--color-maroon-deep);
+}
+
+.font-serif {
+  font-family: var(--font-serif), "Times New Roman", serif;
+}
+
+.font-deva {
+  font-family: var(--font-deva), "Noto Serif Devanagari", serif;
+}
+
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold) 20%,
+    var(--color-gold-light) 50%,
+    var(--color-gold) 80%,
+    transparent
+  );
+}
+
+.filigree {
+  background-image:
+    radial-gradient(circle at 20% 20%, color-mix(in oklab, var(--color-gold) 12%, transparent) 0 1px, transparent 2px),
+    radial-gradient(circle at 80% 80%, color-mix(in oklab, var(--color-gold) 10%, transparent) 0 1px, transparent 2px);
+  background-size: 28px 28px;
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--color-maroon-deep) 55%, transparent) 0%,
+      color-mix(in oklab, var(--color-maroon-deep) 35%, transparent) 40%,
+      color-mix(in oklab, var(--color-maroon-deep) 82%, transparent) 100%
+    );
+}
+
+.section-pad {
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .section-pad {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-pad {
+    padding-inline: 0;
+  }
 }
