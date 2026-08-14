@@ -1,47 +1,43 @@
 import Image from "next/image";
 import { site } from "@/lib/site";
-import { LotusDivider } from "./Ornament";
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-[100svh] overflow-hidden">
+    <section id="top" className="relative min-h-[72vh] overflow-hidden">
       <Image
         src="/images/hero.jpg"
-        alt="Temple mandapa at dusk with oil lamps and marigold garlands"
+        alt=""
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover"
         sizes="100vw"
       />
-      <div className="hero-overlay absolute inset-0" />
-
-      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-5 pb-16 pt-32 md:px-8 md:pb-24">
-        <p className="font-deva mb-3 text-lg tracking-[0.35em] text-gold-light md:text-xl">
-          {site.blessing} · ॐ
+      <div className="absolute inset-0 bg-maroon-deep/70" />
+      <div className="relative z-10 mx-auto flex min-h-[72vh] max-w-6xl flex-col justify-center px-5 py-20 text-cream md:px-8">
+        <p className="text-sm tracking-[0.35em] text-gold-light uppercase">
+          Welcome to
         </p>
-        <h1 className="font-serif max-w-4xl text-4xl leading-[1.1] font-semibold text-cream sm:text-6xl lg:text-7xl">
+        <h1 className="mt-3 max-w-3xl text-4xl font-semibold leading-tight md:text-6xl">
           {site.name}
         </h1>
-        <p className="font-deva mt-3 text-xl text-gold-light/90 md:text-2xl">
-          {site.devanagari}
+        <div className="gold-rule my-6 max-w-xs" />
+        <p className="max-w-2xl text-base leading-relaxed text-cream/90 md:text-lg">
+          A sacred home for Sanatan Dharma in Norval — a place to worship,
+          celebrate, and keep Hindu heritage alive for families across the GTA.
         </p>
-        <LotusDivider className="my-6 max-w-md" />
-        <p className="max-w-xl text-base leading-relaxed text-cream/85 md:text-lg">
-          {site.tagline}. Come for darshan, stay for community, and carry
-          the blessings of Shri Radha Sarveshwar home.
-        </p>
+        <p className="mt-4 text-gold-light">{site.slogan}</p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a
-            href="#visit"
-            className="rounded-full bg-gold px-6 py-3 text-sm font-medium tracking-wide text-maroon-deep uppercase transition hover:bg-gold-light"
+            href="#about"
+            className="rounded-full bg-gold px-6 py-3 text-sm font-semibold tracking-wide text-maroon-deep uppercase hover:bg-gold-light"
           >
-            Plan your visit
+            About us
           </a>
           <a
-            href="#worship"
-            className="rounded-full border border-cream/40 px-6 py-3 text-sm tracking-wide text-cream uppercase transition hover:border-gold hover:text-gold-light"
+            href="#contact"
+            className="rounded-full border border-cream/50 px-6 py-3 text-sm font-semibold tracking-wide text-cream uppercase hover:border-gold hover:text-gold-light"
           >
-            Daily aarti
+            Visit
           </a>
         </div>
       </div>

@@ -1,19 +1,14 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-maroon: #4a0e18;
-  --color-maroon-deep: #2d0810;
-  --color-saffron: #c45c26;
-  --color-gold: #c9a84c;
-  --color-gold-light: #e8d48b;
-  --color-cream: #f7f0e4;
-  --color-ivory: #fbf7ef;
-  --color-ink: #1c1210;
-  --color-peacock: #1a3d3a;
-  --color-lotus: #b85c6a;
-  --font-serif: var(--font-cormorant);
-  --font-sans: var(--font-outfit);
-  --font-deva: var(--font-deva);
+  --color-maroon: #6b1c2a;
+  --color-maroon-deep: #4a121c;
+  --color-gold: #c9a227;
+  --color-gold-light: #e2c86a;
+  --color-cream: #f6ebd4;
+  --color-ivory: #fbf6ec;
+  --color-ink: #2a1618;
+  --font-sans: var(--font-source);
 }
 
 html {
@@ -27,16 +22,8 @@ body {
 }
 
 ::selection {
-  background: color-mix(in oklab, var(--color-gold) 55%, transparent);
+  background: color-mix(in oklab, var(--color-gold) 50%, transparent);
   color: var(--color-maroon-deep);
-}
-
-.font-serif {
-  font-family: var(--font-serif), "Times New Roman", serif;
-}
-
-.font-deva {
-  font-family: var(--font-deva), "Noto Serif Devanagari", serif;
 }
 
 .gold-rule {
@@ -44,42 +31,9 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    var(--color-gold) 20%,
+    var(--color-gold) 18%,
     var(--color-gold-light) 50%,
-    var(--color-gold) 80%,
+    var(--color-gold) 82%,
     transparent
   );
-}
-
-.filigree {
-  background-image:
-    radial-gradient(circle at 20% 20%, color-mix(in oklab, var(--color-gold) 12%, transparent) 0 1px, transparent 2px),
-    radial-gradient(circle at 80% 80%, color-mix(in oklab, var(--color-gold) 10%, transparent) 0 1px, transparent 2px);
-  background-size: 28px 28px;
-}
-
-.hero-overlay {
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in oklab, var(--color-maroon-deep) 55%, transparent) 0%,
-      color-mix(in oklab, var(--color-maroon-deep) 35%, transparent) 40%,
-      color-mix(in oklab, var(--color-maroon-deep) 82%, transparent) 100%
-    );
-}
-
-.section-pad {
-  padding-inline: 1.25rem;
-}
-
-@media (min-width: 768px) {
-  .section-pad {
-    padding-inline: 2.5rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .section-pad {
-    padding-inline: 0;
-  }
 }

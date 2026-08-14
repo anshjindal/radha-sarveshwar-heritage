@@ -1,24 +1,12 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { Cormorant_Garamond, Outfit, Tiro_Devanagari_Hindi } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const sourceSans = Source_Sans_3({
+  variable: "--font-source",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-});
-
-const tiro = Tiro_Devanagari_Hindi({
-  variable: "--font-deva",
-  subsets: ["devanagari", "latin"],
-  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -28,12 +16,19 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description: site.description,
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/images/logo.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.png",
+    apple: "/images/logo.png",
+  },
   keywords: [
     "Hindu temple Norval",
-    "Radha Sarveshwar",
+    "Radha Sarveshwar Heritage Centre",
     "Halton Hills temple",
-    "Sanatan Dharma Ontario",
-    "Hindu heritage centre",
+    "Norval temple",
   ],
   openGraph: {
     title: site.name,
@@ -42,24 +37,21 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: "en_CA",
     type: "website",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: site.name }],
+    images: [{ url: "/images/logo.png", alt: site.name }],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: site.name,
     description: site.description,
-    images: ["/og.jpg"],
+    images: ["/images/logo.png"],
   },
   robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${cormorant.variable} ${outfit.variable} ${tiro.variable} h-full antialiased`}
-    >
-      <body className="min-h-full bg-ivory text-ink">
+    <html lang="en" className={`${sourceSans.variable} h-full antialiased`}>
+      <body className={`${sourceSans.className} min-h-full bg-ivory text-ink`}>
         {children}
         <Analytics />
       </body>

@@ -1,107 +1,92 @@
-"use client";
-
-import { FormEvent, useState } from "react";
 import { site } from "@/lib/site";
-import { LotusDivider } from "./Ornament";
 
 export function Contact() {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
-  const [sent, setSent] = useState(false);
-
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const body = encodeURIComponent(
-      `Namaste, my name is ${name || "(not given)"}.\nPhone: ${phone || "(not given)"}\n\n${message || "I would like to visit the temple."}`,
-    );
-    window.location.href = `${site.phones[0].sms}?body=${body}`;
-    setSent(true);
-  }
-
   return (
-    <section id="contact" className="relative overflow-hidden bg-maroon py-20 text-cream md:py-28">
-      <div className="filigree pointer-events-none absolute inset-0 opacity-40" />
-      <div className="relative mx-auto grid max-w-6xl gap-12 px-5 md:grid-cols-2 md:px-8">
-        <div>
-          <p className="text-sm tracking-[0.28em] text-gold uppercase">
-            Contact
-          </p>
-          <h2 className="font-serif mt-3 text-4xl md:text-5xl">
-            We would be honoured to hear from you
-          </h2>
-          <LotusDivider className="my-6 max-w-xs" />
-          <p className="text-cream/80">
-            Call for darshan timings, puja bookings, or festival details. You
-            can also send a text from the form — it opens your messages app.
-          </p>
+    <section id="contact" className="bg-ivory py-16 md:py-24">
+      <div className="mx-auto max-w-6xl px-5 md:px-8">
+        <p className="text-center text-sm tracking-[0.28em] text-gold uppercase">
+          Get in touch
+        </p>
+        <h2 className="mt-2 text-center text-3xl font-semibold text-maroon md:text-5xl">
+          Contact
+        </h2>
+        <div className="gold-rule mx-auto my-6 max-w-xs" />
+        <p className="mx-auto max-w-2xl text-center text-ink/75">
+          Whether you have questions or wish to visit, reach us by phone or
+          email. We are open daily {site.hours.time}.
+        </p>
 
-          <div className="mt-10 space-y-5">
-            {site.phones.map((item) => (
-              <a
-                key={item.id}
-                href={item.href}
-                className="block rounded-2xl border border-gold/20 bg-maroon-deep/40 px-5 py-4 transition hover:border-gold"
-              >
-                <p className="text-xs tracking-[0.2em] text-gold-light uppercase">
-                  {item.label}
-                </p>
-                <p className="font-serif mt-1 text-2xl">{item.display}</p>
-              </a>
-            ))}
-            <p className="text-cream/70">
-              {site.address.line1}
-              <br />
-              {site.address.line2}
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
+          <article className="rounded-2xl border border-gold/30 bg-cream p-6 text-center">
+            <p className="text-xs tracking-[0.18em] text-maroon uppercase">
+              Contact
             </p>
-          </div>
+            <ul className="mt-3 space-y-1">
+              {site.phones.map((phone) => (
+                <li key={phone.id}>
+                  <a
+                    href={phone.href}
+                    className="text-lg font-semibold text-maroon hover:text-gold"
+                  >
+                    {phone.display}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </article>
+
+          <article className="rounded-2xl border border-gold/30 bg-cream p-6 text-center">
+            <p className="text-xs tracking-[0.18em] text-maroon uppercase">
+              Temple location
+            </p>
+            <p className="mt-3 text-lg font-semibold text-maroon">
+              {site.address.line1}
+            </p>
+            <p className="text-ink/75">{site.address.line2}</p>
+          </article>
+
+          <article className="rounded-2xl border border-gold/30 bg-cream p-6 text-center">
+            <p className="text-xs tracking-[0.18em] text-maroon uppercase">
+              Mail
+            </p>
+            <a
+              href={`mailto:${site.email}`}
+              className="mt-3 block break-all text-lg font-semibold text-maroon hover:text-gold"
+            >
+              {site.email}
+            </a>
+            <p className="mt-2 text-sm text-ink/70">
+              {site.hours.label} {site.hours.time}
+            </p>
+          </article>
         </div>
 
-        <form
-          onSubmit={onSubmit}
-          className="rounded-[1.6rem] border border-gold/20 bg-ivory p-6 text-ink shadow-2xl md:p-8"
-        >
-          <label className="block text-sm text-maroon">
-            Name
-            <input
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="mt-2 w-full rounded-xl border border-maroon/15 bg-white px-4 py-3 outline-none focus:border-gold"
-              autoComplete="name"
-            />
-          </label>
-          <label className="mt-4 block text-sm text-maroon">
-            Phone
-            <input
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              className="mt-2 w-full rounded-xl border border-maroon/15 bg-white px-4 py-3 outline-none focus:border-gold"
-              autoComplete="tel"
-              inputMode="tel"
-            />
-          </label>
-          <label className="mt-4 block text-sm text-maroon">
-            Message
-            <textarea
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              rows={5}
-              className="mt-2 w-full resize-y rounded-xl border border-maroon/15 bg-white px-4 py-3 outline-none focus:border-gold"
-              placeholder="Darshan, puja booking, festival enquiry…"
-            />
-          </label>
-          <button
-            type="submit"
-            className="mt-6 w-full rounded-full bg-maroon px-6 py-3 text-sm tracking-wide text-cream uppercase hover:bg-maroon-deep"
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <a
+            href={site.address.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-maroon px-5 py-2.5 text-sm font-medium text-cream hover:bg-maroon-deep"
           >
-            Text the temple
-          </button>
-          {sent ? (
-            <p className="mt-3 text-center text-sm text-peacock">
-              Your messages app should open. If it does not, please call us.
-            </p>
-          ) : null}
-        </form>
+            Open in Google Maps
+          </a>
+          <a
+            href={site.phones[0].href}
+            className="rounded-full border border-maroon/20 px-5 py-2.5 text-sm font-medium text-maroon hover:border-gold"
+          >
+            Call {site.phones[0].display}
+          </a>
+        </div>
+
+        <div className="mt-8 overflow-hidden rounded-2xl border border-gold/30 shadow-lg">
+          <iframe
+            title="Map to Radha Sarveshwar Heritage Centre"
+            src={site.address.embedUrl}
+            className="h-[380px] w-full border-0 md:h-[460px]"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
       </div>
     </section>
   );

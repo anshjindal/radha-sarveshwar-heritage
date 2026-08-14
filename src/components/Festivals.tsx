@@ -1,83 +1,61 @@
 import Image from "next/image";
-import { LotusDivider } from "./Ornament";
 
 const festivals = [
   {
     title: "Janmashtami",
-    season: "Krishna’s appearance",
+    note: "Krishna’s appearance",
     image: "/images/festival-janmashtami.jpg",
-    alt: "Temple courtyard decorated for Janmashtami",
   },
   {
     title: "Diwali",
-    season: "Festival of lights",
+    note: "Festival of lights",
     image: "/images/festival-diwali.jpg",
-    alt: "Rows of diyas lighting temple steps for Diwali",
   },
   {
     title: "Holi",
-    season: "Festival of colours",
+    note: "Festival of colours",
     image: "/images/festival-holi.jpg",
-    alt: "Holi colours and marigolds in the temple garden",
   },
   {
     title: "Radhashtami",
-    season: "Shri Radha’s appearance",
+    note: "Shri Radha’s appearance",
     image: "/images/diya-lotus.jpg",
-    alt: "Lotus and lamps offered in devotion to Radha",
-  },
-  {
-    title: "Navratri",
-    season: "Nine nights of the Goddess",
-    image: "/images/mandala.jpg",
-    alt: "Sacred mandala in gold and saffron",
-  },
-  {
-    title: "Sharad Purnima",
-    season: "Autumn full moon",
-    image: "/images/heritage-interior.jpg",
-    alt: "Lamp-lit temple hall",
   },
 ];
 
 export function Festivals() {
   return (
-    <section id="festivals" className="bg-cream py-20 md:py-28">
+    <section id="festivals" className="bg-cream py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm tracking-[0.28em] text-saffron uppercase">
-            Utsav
-          </p>
-          <h2 className="font-serif mt-3 text-4xl text-maroon md:text-5xl">
-            Festivals of the year
-          </h2>
-          <LotusDivider className="mx-auto my-6 max-w-xs" />
-          <p className="text-ink/75">
-            The Hindu calendar comes alive here — with kirtan, aarti, prasad, and
-            a welcome for every family. Call ahead for the next utsav date.
-          </p>
-        </div>
-
-        <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <p className="text-center text-sm tracking-[0.28em] text-gold uppercase">
+          Temple events
+        </p>
+        <h2 className="mt-2 text-center text-3xl font-semibold text-maroon md:text-5xl">
+          Festivals
+        </h2>
+        <div className="gold-rule mx-auto my-6 max-w-xs" />
+        <p className="mx-auto max-w-2xl text-center text-ink/75">
+          Join us through the year for the sacred calendar. Call or email for
+          the next utsav date.
+        </p>
+        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {festivals.map((fest) => (
             <li
               key={fest.title}
-              className="group overflow-hidden rounded-3xl bg-ivory shadow-[0_16px_40px_rgba(74,14,24,0.08)]"
+              className="overflow-hidden rounded-2xl bg-ivory shadow-md"
             >
-              <div className="relative h-56 overflow-hidden">
-                <Image
-                  src={fest.image}
-                  alt={fest.alt}
-                  fill
-                  className="object-cover transition duration-700 group-hover:scale-105"
-                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                />
-              </div>
-              <div className="px-6 py-5">
-                <p className="text-xs tracking-[0.22em] text-saffron uppercase">
-                  {fest.season}
+              <Image
+                src={fest.image}
+                alt={fest.title}
+                width={600}
+                height={400}
+                className="h-44 w-full object-cover"
+              />
+              <div className="px-5 py-4">
+                <p className="text-xs tracking-[0.18em] text-gold uppercase">
+                  {fest.note}
                 </p>
-                <h3 className="font-serif mt-1 text-2xl text-maroon">
+                <h3 className="mt-1 text-xl font-semibold text-maroon">
                   {fest.title}
                 </h3>
               </div>

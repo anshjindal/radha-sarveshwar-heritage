@@ -1,26 +1,28 @@
 import Image from "next/image";
 import { nav, site } from "@/lib/site";
-import { LotusDivider } from "./Ornament";
 
 export function Footer() {
   return (
     <footer className="bg-maroon-deep py-14 text-cream">
-      <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:items-center">
-          <div className="flex items-center gap-4">
-            <Image
-              src="/images/logo.png"
-              alt=""
-              width={56}
-              height={56}
-              className="h-14 w-14 rounded-full border border-gold/40 object-cover"
-            />
-            <div>
-              <p className="font-deva text-gold-light">{site.blessing}</p>
-              <p className="font-serif text-xl">{site.name}</p>
-            </div>
-          </div>
-          <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm tracking-[0.16em] text-cream/70 uppercase">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-3 md:px-8">
+        <div>
+          <Image
+            src="/images/logo.png"
+            alt={site.name}
+            width={72}
+            height={72}
+            className="h-[72px] w-[72px] rounded-full bg-black object-cover"
+          />
+          <p className="mt-4 font-semibold">{site.name}</p>
+          <p className="mt-2 text-sm leading-6 text-cream/70">
+            A spiritual and cultural centre dedicated to Hindu values,
+            tradition, and community in Norval, Canada.
+          </p>
+        </div>
+
+        <div>
+          <p className="text-sm tracking-[0.2em] text-gold uppercase">Navigation</p>
+          <nav className="mt-4 flex flex-col gap-2 text-cream/80">
             {nav.map((item) => (
               <a key={item.href} href={item.href} className="hover:text-gold-light">
                 {item.label}
@@ -28,14 +30,34 @@ export function Footer() {
             ))}
           </nav>
         </div>
-        <LotusDivider className="my-10" />
-        <div className="flex flex-col gap-3 text-sm text-cream/55 md:flex-row md:justify-between">
-          <p>
-            {site.address.line1}, {site.address.line2}
+
+        <div>
+          <p className="text-sm tracking-[0.2em] text-gold uppercase">Get in touch</p>
+          <p className="mt-4 text-sm text-cream/80">
+            {site.address.line1}
+            <br />
+            {site.address.line2}
           </p>
-          <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+          <p className="mt-3 text-sm">
+            <a href={`mailto:${site.email}`} className="hover:text-gold-light">
+              {site.email}
+            </a>
+          </p>
+          {site.phones.map((phone) => (
+            <p key={phone.id} className="text-sm">
+              <a href={phone.href} className="hover:text-gold-light">
+                {phone.display}
+              </a>
+            </p>
+          ))}
+          <p className="mt-3 text-sm text-cream/70">
+            Daily {site.hours.time}
+          </p>
         </div>
       </div>
+      <p className="mx-auto mt-10 max-w-6xl px-5 text-center text-sm text-cream/50 md:px-8">
+        © {new Date().getFullYear()} {site.name}. All rights reserved.
+      </p>
     </footer>
   );
 }

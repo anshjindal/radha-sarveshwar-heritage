@@ -1,9 +1,7 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
-import { Worship } from "@/components/Worship";
 import { Festivals } from "@/components/Festivals";
-import { Visit } from "@/components/Visit";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { site } from "@/lib/site";
@@ -15,6 +13,7 @@ export default function Home() {
     name: site.name,
     description: site.description,
     url: site.url,
+    email: site.email,
     telephone: site.phones.map((p) => p.tel),
     address: {
       "@type": "PostalAddress",
@@ -24,7 +23,7 @@ export default function Home() {
       postalCode: site.address.postal,
       addressCountry: "CA",
     },
-    openingHours: "Mo-Su 07:00-21:00",
+    openingHours: site.hours.schema,
   };
 
   return (
@@ -37,9 +36,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <Worship />
         <Festivals />
-        <Visit />
         <Contact />
       </main>
       <Footer />
