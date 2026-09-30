@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { site } from "@/lib/site";
 
@@ -9,19 +10,18 @@ export function Hero() {
 
   return (
     <section
-      id="top"
       className="relative min-h-[72vh] overflow-hidden"
       aria-labelledby="hero-heading"
     >
       <Image
-        src="/images/hero.jpg"
+        src="/images/mandir-exterior-wide.jpg"
         alt={t("hero.imageAlt")}
         fill
         priority
-        className="object-cover"
+        className="object-cover object-[60%_55%]"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-maroon-deep/70" />
+      <div className="absolute inset-0 bg-gradient-to-r from-maroon-deep/90 via-maroon-deep/60 to-maroon-deep/15" />
       <div className="relative z-10 mx-auto flex min-h-[72vh] max-w-6xl flex-col justify-center px-5 py-20 text-cream md:px-8">
         <p className="text-sm tracking-[0.35em] text-gold-light uppercase">
           {t("hero.welcome")}
@@ -37,18 +37,18 @@ export function Hero() {
           {t("hero.body")}
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <a
-            href="#about"
+          <Link
+            href="/about"
             className="rounded-full bg-gold px-6 py-3 text-sm font-semibold tracking-wide text-maroon-deep uppercase hover:bg-gold-light"
           >
             {t("hero.aboutCta")}
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            href="/contact"
             className="rounded-full border border-cream/50 px-6 py-3 text-sm font-semibold tracking-wide text-cream uppercase hover:border-gold hover:text-gold-light"
           >
             {t("hero.visitCta")}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

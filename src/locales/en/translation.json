@@ -1,17 +1,26 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About",
-    "festivals": "Festivals",
-    "contact": "Contact",
+    "about": "About Us",
+    "construction": "Construction Updates",
+    "contact": "Contact Us",
     "googleListing": "Google listing",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "menu": "Menu"
+    "menu": "Menu",
+    "mandir": "Mandir",
+    "getInvolved": "Get Involved",
+    "supportUs": "Support Us",
+    "calendar": "Religious Calendar",
+    "samagri": "Pooja Samagri",
+    "volunteer": "Volunteer",
+    "seva": "Puja & Seva Booking",
+    "donate": "Donate",
+    "sponsorship": "Sponsorship"
   },
   "hero": {
     "welcome": "Welcome to",
-    "body": "A sacred Hindu temple and heritage centre in Norval, Halton Hills — a place to worship, celebrate festivals, and keep Sanatan Dharma alive for families across the GTA.",
+    "body": "A Hindu temple and heritage centre in Norval, Halton Hills — just minutes from Brampton and Georgetown — for worship, festivals and Sanatan Dharma across the GTA and Southern Ontario.",
     "aboutCta": "About us",
     "visitCta": "Visit",
     "imageAlt": "Radha Sarveshwar Heritage Centre temple grounds in Norval, Ontario"
@@ -21,7 +30,13 @@
     "title": "Hindu temple in Norval, Ontario",
     "p1": "Radha Sarveshwar Heritage Centre is a Hindu temple and cultural home in Norval, Halton Hills. Dedicated to Shri Radha Sarveshwar, we welcome devotees from across the Greater Toronto Area for worship, festivals, and community.",
     "p2": "Our purpose is to preserve and share Sanatan Dharma — a place where families can gather, children can grow in culture, and visitors can find peace.",
-    "imageAlt": "Radha Sarveshwar Heritage Centre temple hall interior"
+    "imageAlt": "Radha Sarveshwar Heritage Centre mandir building and grounds in Norval, Ontario",
+    "pandit": {
+      "eyebrow": "Our resident pandit",
+      "name": "Pandit Mahesh Kumar Acharya",
+      "body": "Pandit Mahesh Kumar Acharya serves as the resident pandit of Radha Sarveshwar Heritage Centre. He leads the daily aarti and puja, festival celebrations and family ceremonies, and guides devotees in the traditions of Sanatan Dharma with warmth and devotion.",
+      "imageAlt": "Pandit Mahesh Kumar Acharya wearing a marigold garland and a traditional cap"
+    }
   },
   "festivals": {
     "eyebrow": "Temple events",
@@ -50,6 +65,65 @@
       }
     }
   },
+  "calendar": {
+    "eyebrow": "Sacred dates",
+    "title": "Religious Calendar {{year}}",
+    "body": "Shradh, Navratri, Kartik month and other sacred dates observed at the temple through December.",
+    "downloadPoster": "Download calendar poster",
+    "date": "Date",
+    "day": "Day",
+    "occasion": "Occasion",
+    "groups": {
+      "pitruPaksha": "Pitru Paksha",
+      "navratri": "Navratri & Vijay Dashami",
+      "kartik": "Kartik Month",
+      "december": "December"
+    },
+    "contact": "For details, contact:"
+  },
+  "samagri": {
+    "eyebrow": "Puja preparation",
+    "title": "Pooja Samagri",
+    "body": "Lists of items to bring for puja and Rudra Abhishek at the temple. Tap a list to open it full size.",
+    "download": "Download",
+    "items": {
+      "pooja": {
+        "title": "Pooja Samagri",
+        "note": "Puja & havan — 50 items",
+        "alt": "Pooja samagri list of 50 items in Hindi and English, including roli, moli, ghee, havan samagri, havan kund and dakshina"
+      },
+      "rudra": {
+        "title": "Rudra Abhishek Samagri",
+        "note": "Shiv puja — 23 items",
+        "alt": "Rudra Abhishek pooja samagri list of 23 items in Hindi and English, including milk, dahi, ghee, honey, Ganga jal, bel patra and flowers"
+      }
+    }
+  },
+  "construction": {
+    "eyebrow": "Mandir renovation",
+    "title": "Turning a house into our mandir",
+    "body": "We are converting a farmhouse on Tenth Line into Radha Sarveshwar Heritage Centre. The mandir is open for darshan with limited capacity while the work continues.",
+    "timelineTitle": "Progress so far",
+    "latest": "Latest",
+    "milestones": {
+      "renovationStart": {
+        "title": "Renovation begins",
+        "body": "We bought a 1-acre farmhouse on Tenth Line and began converting it: a larger hall for the darbar, a langar kitchen in the garage, two new washrooms and an expanded patio."
+      },
+      "limitedOpening": {
+        "title": "Mandir opens with limited capacity",
+        "body": "Devotees are welcome for darshan in limited numbers while renovation continues."
+      },
+      "murtiArrival": {
+        "title": "22 murtis arrive from Jaipur",
+        "body": "Twenty-two murtis shipped from Jaipur, India arrived safely at the mandir."
+      }
+    },
+    "renovationPhotoAlt": "Inside the house during renovation, with the expanded hall and floors covered for the work",
+    "photo1Alt": "Crates holding 22 murtis from Jaipur lined up in front of Radha Sarveshwar Heritage Centre",
+    "photo2Alt": "Wide view of the murti crates from Jaipur on the driveway beside the marigold garden",
+    "visitCta": "Plan your visit"
+  },
   "contact": {
     "eyebrow": "Get in touch",
     "title": "Contact",
@@ -64,14 +138,173 @@
     "mapTitle": "Map to Radha Sarveshwar Heritage Centre"
   },
   "footer": {
-    "blurb": "A spiritual and cultural centre dedicated to Hindu values, tradition, and community in Norval, Canada.",
+    "blurb": "A Hindu temple and cultural centre in Norval, Halton Hills, welcoming devotees from Brampton, Georgetown, Mississauga, Milton, Caledon and across Southern Ontario.",
     "navigation": "Navigation",
     "getInTouch": "Get in touch",
     "daily": "Daily {{hours}}",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "explore": "Explore"
   },
   "common": {
     "openDaily": "Open daily",
     "hoursLabel": "Open daily"
+  },
+  "volunteer": {
+    "eyebrow": "Seva with us",
+    "title": "Volunteer",
+    "intro": "Seva is at the heart of the mandir. Give a few hours a week or help during festivals — every helping hand matters as we build Radha Sarveshwar Heritage Centre together.",
+    "cardsEyebrow": "Where you can help",
+    "cardsTitle": "Volunteer roles",
+    "cards": {
+      "templeSeva": {
+        "title": "Temple seva",
+        "body": "Help with daily darshan, aarti preparation, flowers and keeping the mandir clean."
+      },
+      "festivals": {
+        "title": "Festivals & events",
+        "body": "Set up, decorate and welcome devotees during Navratri, Diwali and other utsavs."
+      },
+      "kitchen": {
+        "title": "Kitchen & prasad",
+        "body": "Prepare and serve bhog, prasad and bhandara for devotees."
+      },
+      "construction": {
+        "title": "Construction & setup",
+        "body": "Lend a hand with renovation, moving materials and preparing spaces as the mandir grows."
+      },
+      "youth": {
+        "title": "Youth & culture",
+        "body": "Support bhajan, language and culture programs for children and youth."
+      },
+      "outreach": {
+        "title": "Media & outreach",
+        "body": "Share updates, take photos and help spread the word across the GTA."
+      }
+    },
+    "stepsTitle": "How to join",
+    "steps": {
+      "s1": "Call or email us with your name and the kind of seva you would like to do.",
+      "s2": "We will get back to you with upcoming opportunities.",
+      "s3": "Visit the mandir and begin your seva."
+    },
+    "contactHeading": "Ready to volunteer? Get in touch"
+  },
+  "seva": {
+    "eyebrow": "Puja services",
+    "title": "Puja & Seva Booking",
+    "intro": "Book a puja at the mandir or at your home with our pandit ji. Call or email us to choose a date and find out what samagri to prepare.",
+    "cardsEyebrow": "Services",
+    "cardsTitle": "Pujas we perform",
+    "cards": {
+      "rudraAbhishek": {
+        "title": "Rudra Abhishek",
+        "body": "Abhishek of Bhagwan Shiv with milk, dahi, honey, Ganga jal and bel patra."
+      },
+      "havan": {
+        "title": "Havan",
+        "body": "Vedic havan for peace, health and prosperity for your family."
+      },
+      "satyanarayan": {
+        "title": "Satyanarayan Katha",
+        "body": "Katha and puja of Bhagwan Satyanarayan for auspicious occasions."
+      },
+      "shradh": {
+        "title": "Shradh & Pitru Puja",
+        "body": "Shradh, tarpan and puja for ancestors, including during Pitru Paksha."
+      },
+      "grihaPravesh": {
+        "title": "Griha Pravesh",
+        "body": "Puja and blessings for moving into a new home."
+      },
+      "sanskar": {
+        "title": "Sanskar ceremonies",
+        "body": "Naamkaran, mundan and other family sanskars."
+      }
+    },
+    "stepsTitle": "How to book",
+    "steps": {
+      "s1": "Call or email us with the puja, your preferred date and the location.",
+      "s2": "We will confirm the muhurat and share the samagri list.",
+      "s3": "See the Pooja Samagri lists below for the common items to prepare."
+    },
+    "contactHeading": "Book a puja"
+  },
+  "donate": {
+    "eyebrow": "Support the mandir",
+    "title": "Donate",
+    "intro": "Your daan helps build and sustain Radha Sarveshwar Heritage Centre — from renovation and the installation of our murtis to daily puja and festivals.",
+    "cardsEyebrow": "Where your donation goes",
+    "cardsTitle": "Your daan supports",
+    "cards": {
+      "construction": {
+        "title": "Mandir construction",
+        "body": "Renovation and building work to complete the mandir."
+      },
+      "murtis": {
+        "title": "Murti sthapana",
+        "body": "Installation of the 22 murtis that arrived from Jaipur, India."
+      },
+      "dailyPuja": {
+        "title": "Daily puja & bhog",
+        "body": "Flowers, samagri and bhog for daily aarti and darshan."
+      },
+      "festivals": {
+        "title": "Festivals & community",
+        "body": "Celebrations, prasad and programs for families across the GTA."
+      }
+    },
+    "stepsTitle": "How to donate",
+    "steps": {
+      "s1": "Donate in person at the mandir during opening hours.",
+      "s2": "Call or email us for other ways to give, such as cheque or e-Transfer.",
+      "s3": "Every contribution, big or small, is received with gratitude."
+    },
+    "contactHeading": "Questions about donating?"
+  },
+  "sponsorship": {
+    "eyebrow": "Sponsor a seva",
+    "title": "Sponsorship",
+    "intro": "Sponsor a festival, bhog or seva in your family's name, to mark a birthday or anniversary, or in memory of a loved one.",
+    "cardsEyebrow": "Ways to sponsor",
+    "cardsTitle": "Sponsorship opportunities",
+    "cards": {
+      "festival": {
+        "title": "Festival sponsorship",
+        "body": "Sponsor decorations, prasad or programs for Navratri, Diwali and other utsavs."
+      },
+      "bhog": {
+        "title": "Bhog & prasad",
+        "body": "Sponsor the day's bhog and prasad for devotees."
+      },
+      "bhandara": {
+        "title": "Bhandara",
+        "body": "Sponsor a community meal on a special day."
+      },
+      "murtiSeva": {
+        "title": "Murti shringar",
+        "body": "Sponsor vastra, flowers and shringar for the murtis."
+      },
+      "inKind": {
+        "title": "In-kind donations",
+        "body": "Offer puja samagri, flowers, kitchen supplies or construction materials."
+      },
+      "events": {
+        "title": "Bhajan & cultural events",
+        "body": "Sponsor a bhajan sandhya, katha or cultural program."
+      }
+    },
+    "stepsTitle": "How to sponsor",
+    "steps": {
+      "s1": "Call or email us with the seva and date you have in mind.",
+      "s2": "We will share available dates and details.",
+      "s3": "Your family will be remembered in the prayers on the day."
+    },
+    "contactHeading": "Sponsor a seva"
+  },
+  "serviceArea": {
+    "eyebrow": "Visit us",
+    "title": "A Hindu temple near Brampton and Halton Hills",
+    "body": "Radha Sarveshwar Heritage Centre is on Tenth Line North in Norval, between Brampton and Georgetown. Devotees come from across Peel, Halton, the Greater Toronto Area and Southern Ontario for darshan, puja and festivals.",
+    "directionsCta": "Get directions"
   }
 }

@@ -2,16 +2,25 @@
   "nav": {
     "home": "Accueil",
     "about": "À propos",
-    "festivals": "Festivals",
-    "contact": "Contact",
+    "construction": "Avancement des travaux",
+    "contact": "Nous joindre",
     "googleListing": "Fiche Google",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
-    "menu": "Menu"
+    "menu": "Menu",
+    "mandir": "Mandir",
+    "getInvolved": "S’impliquer",
+    "supportUs": "Nous soutenir",
+    "calendar": "Calendrier religieux",
+    "samagri": "Pooja Samagri",
+    "volunteer": "Bénévolat",
+    "seva": "Réservation de puja et seva",
+    "donate": "Faire un don",
+    "sponsorship": "Commandites"
   },
   "hero": {
     "welcome": "Bienvenue à",
-    "body": "Un temple hindou sacré et centre du patrimoine à Norval, Halton Hills — un lieu de culte, de festivals et de Sanatan Dharma pour les familles de la RGT.",
+    "body": "Un temple hindou et centre patrimonial à Norval, Halton Hills — à quelques minutes de Brampton et Georgetown — pour le culte, les fêtes et le Sanatan Dharma dans la RGT et le Sud de l’Ontario.",
     "aboutCta": "À propos",
     "visitCta": "Visiter",
     "imageAlt": "Radha Sarveshwar Heritage Centre à Norval, Ontario"
@@ -21,7 +30,13 @@
     "title": "Temple hindou à Norval, Ontario",
     "p1": "Le Radha Sarveshwar Heritage Centre est un temple hindou et foyer culturel à Norval, Halton Hills. Dédié à Shri Radha Sarveshwar, nous accueillons les dévots de la grande région de Toronto pour le culte, les festivals et la communauté.",
     "p2": "Notre mission est de préserver et partager le Sanatan Dharma — un lieu où les familles se réunissent, où les enfants grandissent dans la culture, et où les visiteurs trouvent la paix.",
-    "imageAlt": "Intérieur du temple Radha Sarveshwar Heritage Centre"
+    "imageAlt": "Le bâtiment et le terrain du mandir Radha Sarveshwar Heritage Centre à Norval, en Ontario",
+    "pandit": {
+      "eyebrow": "Notre pandit résident",
+      "name": "Pandit Mahesh Kumar Acharya",
+      "body": "Pandit Mahesh Kumar Acharya est le pandit résident du Radha Sarveshwar Heritage Centre. Il dirige l’aarti et la puja quotidiennes, les célébrations des fêtes et les cérémonies familiales, et guide les fidèles dans les traditions du Sanatan Dharma avec chaleur et dévotion.",
+      "imageAlt": "Pandit Mahesh Kumar Acharya portant une guirlande de soucis et un bonnet traditionnel"
+    }
   },
   "festivals": {
     "eyebrow": "Événements du temple",
@@ -50,6 +65,65 @@
       }
     }
   },
+  "calendar": {
+    "eyebrow": "Dates sacrées",
+    "title": "Calendrier religieux {{year}}",
+    "body": "Shradh, Navratri, le mois de Kartik et les autres dates sacrées célébrées au temple jusqu’en décembre.",
+    "downloadPoster": "Télécharger l’affiche du calendrier",
+    "date": "Date",
+    "day": "Jour",
+    "occasion": "Célébration",
+    "groups": {
+      "pitruPaksha": "Pitru Paksha",
+      "navratri": "Navratri et Vijay Dashami",
+      "kartik": "Mois de Kartik",
+      "december": "Décembre"
+    },
+    "contact": "Pour tout renseignement, contactez :"
+  },
+  "samagri": {
+    "eyebrow": "Préparer la puja",
+    "title": "Pooja Samagri",
+    "body": "Listes des articles à apporter pour la puja et le Rudra Abhishek au temple. Touchez une liste pour l’ouvrir en plein format.",
+    "download": "Télécharger",
+    "items": {
+      "pooja": {
+        "title": "Pooja Samagri",
+        "note": "Puja et havan — 50 articles",
+        "alt": "Liste de 50 articles de pooja samagri en hindi et en anglais, dont roli, moli, ghee, havan samagri, havan kund et dakshina"
+      },
+      "rudra": {
+        "title": "Samagri du Rudra Abhishek",
+        "note": "Puja de Shiva — 23 articles",
+        "alt": "Liste de 23 articles pour le Rudra Abhishek en hindi et en anglais, dont lait, yaourt, ghee, miel, eau du Gange, feuilles de bel et fleurs"
+      }
+    }
+  },
+  "construction": {
+    "eyebrow": "Rénovation du mandir",
+    "title": "Transformer une maison en mandir",
+    "body": "Nous transformons une maison de ferme sur Tenth Line en Radha Sarveshwar Heritage Centre. Le mandir est ouvert au darshan en capacité limitée pendant les travaux.",
+    "timelineTitle": "Où en sommes-nous",
+    "latest": "Nouveau",
+    "milestones": {
+      "renovationStart": {
+        "title": "Début de la rénovation",
+        "body": "Nous avons acheté une maison de ferme d’un acre sur Tenth Line et commencé sa transformation : salle agrandie pour le darbar, cuisine pour le langar dans le garage, deux nouvelles toilettes et patio agrandi."
+      },
+      "limitedOpening": {
+        "title": "Ouverture du mandir avec capacité limitée",
+        "body": "Les fidèles sont accueillis pour le darshan en nombre limité pendant la suite des travaux."
+      },
+      "murtiArrival": {
+        "title": "Arrivée de 22 murtis de Jaipur",
+        "body": "Vingt-deux murtis expédiées de Jaipur, en Inde, sont arrivées au mandir en bon état."
+      }
+    },
+    "renovationPhotoAlt": "L’intérieur de la maison pendant la rénovation, avec la salle agrandie et les planchers protégés pour les travaux",
+    "photo1Alt": "Caisses contenant 22 murtis de Jaipur alignées devant le Radha Sarveshwar Heritage Centre",
+    "photo2Alt": "Vue d’ensemble des caisses de murtis de Jaipur dans l’allée, près du jardin de soucis",
+    "visitCta": "Planifier une visite"
+  },
   "contact": {
     "eyebrow": "Nous joindre",
     "title": "Contact",
@@ -64,14 +138,21 @@
     "mapTitle": "Carte vers Radha Sarveshwar Heritage Centre"
   },
   "footer": {
-    "blurb": "Un centre spirituel et culturel dédié aux valeurs hindoues, à la tradition et à la communauté à Norval, Canada.",
+    "blurb": "Un temple hindou et centre culturel à Norval, Halton Hills, qui accueille les fidèles de Brampton, Georgetown, Mississauga, Milton, Caledon et de tout le Sud de l’Ontario.",
     "navigation": "Navigation",
     "getInTouch": "Nous joindre",
     "daily": "Tous les jours {{hours}}",
-    "rights": "Tous droits réservés."
+    "rights": "Tous droits réservés.",
+    "explore": "Explorer"
   },
   "common": {
     "openDaily": "Ouvert tous les jours",
     "hoursLabel": "Ouvert tous les jours"
+  },
+  "serviceArea": {
+    "eyebrow": "Nous rendre visite",
+    "title": "Un temple hindou près de Brampton et Halton Hills",
+    "body": "Le Radha Sarveshwar Heritage Centre se trouve sur Tenth Line North à Norval, entre Brampton et Georgetown. Les fidèles viennent de Peel, Halton, la région du Grand Toronto et le Sud de l’Ontario pour le darshan, la puja et les fêtes.",
+    "directionsCta": "Itinéraire"
   }
 }

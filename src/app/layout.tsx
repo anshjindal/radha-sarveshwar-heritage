@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Source_Sans_3 } from "next/font/google";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import { I18nProvider } from "@/components/I18nProvider";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -11,7 +14,7 @@ const sourceSans = Source_Sans_3({
   display: "swap",
 });
 
-const titleDefault = `${site.name} | Hindu Temple in Norval, Ontario`;
+const titleDefault = `${site.name} | Hindu Temple near Brampton & Halton Hills`;
 
 export const viewport: Viewport = {
   themeColor: "#4a121c",
@@ -58,7 +61,7 @@ export const metadata: Metadata = {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: `${site.name} — Hindu temple in Norval, Ontario`,
+        alt: `${site.name} — Hindu temple in Norval, Halton Hills near Brampton, Ontario`,
       },
     ],
   },
@@ -79,6 +82,9 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
   other: {
     "geo.region": "CA-ON",
     "geo.placename": "Norval",
@@ -91,8 +97,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en-CA" className={`${sourceSans.variable} h-full antialiased`}>
       <body className={`${sourceSans.className} min-h-full bg-ivory text-ink`}>
-        <I18nProvider>{children}</I18nProvider>
+        <I18nProvider>
+          <Header />
+          {children}
+          <Footer />
+        </I18nProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

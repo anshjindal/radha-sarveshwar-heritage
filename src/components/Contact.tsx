@@ -7,17 +7,17 @@ export function Contact() {
   const { t } = useTranslation();
 
   return (
-    <section id="contact" className="bg-ivory py-16 md:py-24" aria-labelledby="contact-heading">
+    <section className="bg-ivory py-16 md:py-24" aria-labelledby="contact-heading">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <p className="text-center text-sm tracking-[0.28em] text-gold uppercase">
           {t("contact.eyebrow")}
         </p>
-        <h2
+        <h1
           id="contact-heading"
           className="mt-2 text-center text-3xl font-semibold text-maroon md:text-5xl"
         >
           {t("contact.title")}
-        </h2>
+        </h1>
         <div className="gold-rule mx-auto my-6 max-w-xs" />
         <p className="mx-auto max-w-2xl text-center text-ink/75">
           {t("contact.body", { hours: site.hours.time })}
