@@ -38,6 +38,11 @@ if (!i18n.isInitialized) {
         caches: ["localStorage"],
       },
     });
+} else {
+  // The i18next singleton outlives hot reloads, so refresh edited translations.
+  for (const [lng, { translation }] of Object.entries(resources)) {
+    i18n.addResourceBundle(lng, "translation", translation, true, true);
+  }
 }
 
 export default i18n;

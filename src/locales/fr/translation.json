@@ -2,7 +2,7 @@
   "nav": {
     "home": "Accueil",
     "about": "À propos",
-    "construction": "Avancement des travaux",
+    "construction": "Développement du mandir",
     "contact": "Nous joindre",
     "googleListing": "Fiche Google",
     "openMenu": "Ouvrir le menu",
@@ -100,28 +100,48 @@
     }
   },
   "construction": {
-    "eyebrow": "Rénovation du mandir",
-    "title": "Transformer une maison en mandir",
-    "body": "Nous transformons une maison de ferme sur Tenth Line en Radha Sarveshwar Heritage Centre. Le mandir est ouvert au darshan en capacité limitée pendant les travaux.",
-    "timelineTitle": "Où en sommes-nous",
+    "eyebrow": "Développement du mandir",
+    "title": "Bâtir un temple",
+    "body": "Le Radha Sarveshwar Heritage Centre se développe à Halton Hills comme lieu de culte, de seva, de communauté et de patrimoine culturel.\n\nLe parcours a commencé il y a plusieurs années, avec la vision partagée par des fidèles d'établir un centre spirituel dédié. Avec le temps, cette vision a trouvé un nouveau départ, et le projet prend forme peu à peu grâce aux bénédictions, au dévouement des fidèles et au soutien constant de la communauté.",
+    "timelineTitle": "Notre parcours",
     "latest": "Nouveau",
     "milestones": {
+      "visionBegins": {
+        "title": "La vision prend naissance",
+        "body": "La propriété d'un acre à Halton Hills a été acquise dans le but d'établir un mandir et un centre communautaire.\n\nLe projet est resté en suspens pendant plusieurs années, au gré des circonstances."
+      },
+      "siteVisit": {
+        "title": "Un nouveau départ",
+        "body": "Le 14 juillet 2025, nous nous sommes réunis sur la propriété et avons pris l'engagement ferme d'aller de l'avant avec la vision d'établir le mandir. Dès lors, les plans ont commencé à prendre forme pour faire du site un espace dédié au culte et aux activités communautaires."
+      },
       "renovationStart": {
-        "title": "Début de la rénovation",
-        "body": "Nous avons acheté une maison de ferme d’un acre sur Tenth Line et commencé sa transformation : salle agrandie pour le darbar, cuisine pour le langar dans le garage, deux nouvelles toilettes et patio agrandi."
+        "title": "Début des travaux d'aménagement",
+        "body": "Les travaux de rénovation et d'aménagement ont commencé sur la propriété.\n\nIls comprenaient l'agrandissement de l'espace du darbar, l'aménagement d'une cuisine de langar, l'ajout de toilettes et l'amélioration des espaces extérieurs pour les fidèles."
       },
       "limitedOpening": {
-        "title": "Ouverture du mandir avec capacité limitée",
-        "body": "Les fidèles sont accueillis pour le darshan en nombre limité pendant la suite des travaux."
+        "title": "Début des pujas",
+        "body": "Les pujas ont commencé au mandir.\n\nLes fidèles ont été accueillis pour le darshan pendant que les travaux se poursuivaient autour d'eux."
       },
       "murtiArrival": {
         "title": "Arrivée de 22 murtis de Jaipur",
-        "body": "Vingt-deux murtis expédiées de Jaipur, en Inde, sont arrivées au mandir en bon état."
+        "body": "Vingt-deux murtis sont arrivées sans encombre de Jaipur, en Inde.\n\nLeur arrivée a marqué une nouvelle étape importante dans le développement du mandir."
+      },
+      "parkingWork": {
+        "title": "Début de l'aménagement du stationnement",
+        "body": "Les travaux d'aménagement d'un stationnement agrandi pour les fidèles ont commencé.\n\nLes premiers camions de résidus de planage d'asphalte recyclé sont arrivés au début des travaux de la surface du stationnement."
       }
     },
     "renovationPhotoAlt": "L’intérieur de la maison pendant la rénovation, avec la salle agrandie et les planchers protégés pour les travaux",
     "photo1Alt": "Caisses contenant 22 murtis de Jaipur alignées devant le Radha Sarveshwar Heritage Centre",
     "photo2Alt": "Vue d’ensemble des caisses de murtis de Jaipur dans l’allée, près du jardin de soucis",
+    "parkingPhoto1Alt": "Camion à benne à côté d'un tas de résidus d'asphalte pour le nouveau stationnement",
+    "parkingPhoto2Alt": "Résidus d'asphalte déchargés à l'arrière d'un camion à benne sur l'emplacement du nouveau stationnement",
+    "pujaPhotoAlt": "Fidèles assis sur le tapis pendant la puja devant le darbar du mandir",
+    "siteVisitPhotoAlt": "La propriété au crépuscule le 14 juillet 2025, avec des voitures garées dans l'allée de gravier",
+    "closingTitle": "Le parcours continue",
+    "closingP1": "Le développement du Radha Sarveshwar Heritage Centre est un parcours qui se poursuit.",
+    "closingP2": "Avec le soutien constant des fidèles et la grâce de Radha Sarveshwar, nous souhaitons faire peu à peu du Centre un lieu où les générations pourront se réunir pour le <b>darshan, la puja, la seva, le langar, la culture et la communauté</b>.",
+    "closingTagline": "Ce n'est que le début.",
     "visitCta": "Planifier une visite"
   },
   "contact": {

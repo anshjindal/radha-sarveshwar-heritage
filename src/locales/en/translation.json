@@ -2,7 +2,7 @@
   "nav": {
     "home": "Home",
     "about": "About Us",
-    "construction": "Construction Updates",
+    "construction": "Mandir Development",
     "contact": "Contact Us",
     "googleListing": "Google listing",
     "openMenu": "Open menu",
@@ -100,28 +100,48 @@
     }
   },
   "construction": {
-    "eyebrow": "Mandir renovation",
-    "title": "Turning a house into our mandir",
-    "body": "We are converting a farmhouse on Tenth Line into Radha Sarveshwar Heritage Centre. The mandir is open for darshan with limited capacity while the work continues.",
-    "timelineTitle": "Progress so far",
+    "eyebrow": "Mandir development",
+    "title": "Building a Temple",
+    "body": "Radha Sarveshwar Heritage Centre is being developed as a place of worship, seva, community, and cultural heritage in Halton Hills.\n\nThe journey began several years ago with a vision shared by devotees to establish a dedicated spiritual centre. Over time, that vision found a new beginning, and the project is now steadily taking shape through the blessings, the dedication of devotees, and the continued support of the community.",
+    "timelineTitle": "Our Journey",
     "latest": "Latest",
     "milestones": {
+      "visionBegins": {
+        "title": "The Vision Begins",
+        "body": "The property of 1 acre in Halton Hills was acquired with the vision of establishing a mandir and community centre.\n\nThe project remained on hold for several years while circumstances evolved."
+      },
+      "siteVisit": {
+        "title": "A New Beginning",
+        "body": "On 14 July 2025, we came together at the property and made a firm commitment to move forward with the vision of establishing the mandir. From that point, plans began to take shape for developing the site into a dedicated space for worship and community activities."
+      },
       "renovationStart": {
-        "title": "Renovation begins",
-        "body": "We bought a 1-acre farmhouse on Tenth Line and began converting it: a larger hall for the darbar, a langar kitchen in the garage, two new washrooms and an expanded patio."
+        "title": "Development Begins",
+        "body": "Renovation and development work began at the property.\n\nThe work included creating a larger darbar space, developing a langar kitchen, adding washrooms, and improving the outdoor areas for devotees."
       },
       "limitedOpening": {
-        "title": "Mandir opens with limited capacity",
-        "body": "Devotees are welcome for darshan in limited numbers while renovation continues."
+        "title": "Puja Begins",
+        "body": "Puja began at the mandir.\n\nDevotees were welcomed for darshan while development work continued around them."
       },
       "murtiArrival": {
-        "title": "22 murtis arrive from Jaipur",
-        "body": "Twenty-two murtis shipped from Jaipur, India arrived safely at the mandir."
+        "title": "22 Murtis Arrive from Jaipur",
+        "body": "Twenty-two murtis arrived safely from Jaipur, India.\n\nTheir arrival marked another important milestone in the development of the mandir."
+      },
+      "parkingWork": {
+        "title": "Parking Development Begins",
+        "body": "Work began on developing an expanded parking area for devotees.\n\nThe first truckloads of recycled asphalt millings arrived as work on the parking surface commenced."
       }
     },
     "renovationPhotoAlt": "Inside the house during renovation, with the expanded hall and floors covered for the work",
     "photo1Alt": "Crates holding 22 murtis from Jaipur lined up in front of Radha Sarveshwar Heritage Centre",
     "photo2Alt": "Wide view of the murti crates from Jaipur on the driveway beside the marigold garden",
+    "parkingPhoto1Alt": "Dump truck beside a pile of asphalt millings for the new parking area",
+    "parkingPhoto2Alt": "Asphalt millings unloaded from the back of a dump truck onto the site of the new parking area",
+    "pujaPhotoAlt": "Devotees seated on the carpet during puja in front of the mandir darbar",
+    "siteVisitPhotoAlt": "The property at dusk on 14 July 2025, with cars parked on the gravel driveway",
+    "closingTitle": "The Journey Continues",
+    "closingP1": "The development of Radha Sarveshwar Heritage Centre is an ongoing journey.",
+    "closingP2": "With the continued support of devotees and the grace of Radha Sarveshwar, we look forward to gradually developing the Centre into a place where generations can come together for <b>darshan, puja, seva, langar, culture, and community</b>.",
+    "closingTagline": "This is only the beginning.",
     "visitCta": "Plan your visit"
   },
   "contact": {

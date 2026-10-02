@@ -2,14 +2,29 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
+import { Trans, useTranslation } from "react-i18next";
 
 type Photo = { src: string; alt: string; width: number; height: number };
 
-const milestones: { key: string; month: string; photos: Photo[] }[] = [
+/** `date` is YYYY, YYYY-MM, or YYYY-MM-DD to show the exact day. */
+const milestones: { key: string; date: string; photos: Photo[] }[] = [
+  { key: "visionBegins", date: "2022", photos: [] },
+  {
+    key: "siteVisit",
+    date: "2025-07-14",
+    photos: [
+      {
+        src: "/images/construction/site-visit.jpg",
+        alt: "siteVisitPhotoAlt",
+        width: 472,
+        height: 837,
+      },
+    ],
+  },
   {
     key: "renovationStart",
-    month: "2026-01",
+    date: "2026-01",
     photos: [
       {
         src: "/images/construction/renovation-interior.jpg",
@@ -19,10 +34,21 @@ const milestones: { key: string; month: string; photos: Photo[] }[] = [
       },
     ],
   },
-  { key: "limitedOpening", month: "2026-03", photos: [] },
+  {
+    key: "limitedOpening",
+    date: "2026-03",
+    photos: [
+      {
+        src: "/images/construction/puja-begins.jpg",
+        alt: "pujaPhotoAlt",
+        width: 587,
+        height: 1024,
+      },
+    ],
+  },
   {
     key: "murtiArrival",
-    month: "2026-09",
+    date: "2026-09-22",
     photos: [
       {
         src: "/images/construction/murti-arrival-1.png",
@@ -38,6 +64,24 @@ const milestones: { key: string; month: string; photos: Photo[] }[] = [
       },
     ],
   },
+  {
+    key: "parkingWork",
+    date: "2026-10-01",
+    photos: [
+      {
+        src: "/images/construction/parking-work-1.jpg",
+        alt: "parkingPhoto1Alt",
+        width: 1024,
+        height: 768,
+      },
+      {
+        src: "/images/construction/parking-work-2.jpg",
+        alt: "parkingPhoto2Alt",
+        width: 1024,
+        height: 768,
+      },
+    ],
+  },
 ];
 
 export function Construction() {
@@ -48,9 +92,34 @@ export function Construction() {
     year: "numeric",
     timeZone: "UTC",
   });
-  const formatMonth = (month: string) =>
-    monthYear.format(new Date(`${month}-01T00:00:00Z`));
+  const dayMonthYear = new Intl.DateTimeFormat(lang === "en" ? "en-GB" : lang, {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+  const formatDate = (date: string) =>
+    date.length === 4
+      ? date
+      : date.length > 7
+        ? dayMonthYear.format(new Date(`${date}T00:00:00Z`))
+        : monthYear.format(new Date(`${date}-01T00:00:00Z`));
+  const paragraphs = (key: string) => t(key).split("\n\n");
   const latest = milestones[milestones.length - 1];
+  const [enlarged, setEnlarged] = useState<Photo | null>(null);
+
+  useEffect(() => {
+    if (!enlarged) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setEnlarged(null);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [enlarged]);
 
   return (
     <>
@@ -69,7 +138,11 @@ export function Construction() {
             {t("construction.title")}
           </h1>
           <div className="gold-rule mx-auto my-6 max-w-xs" />
-          <p className="text-ink/75">{t("construction.body")}</p>
+          <div className="space-y-4 text-ink/75">
+            {paragraphs("construction.body").map((text) => (
+              <p key={text}>{text}</p>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -92,7 +165,7 @@ export function Construction() {
                   className={`absolute top-1.5 -left-[9px] h-4 w-4 rounded-full border-2 border-ivory ${m.key === latest.key ? "bg-maroon" : "bg-gold"}`}
                 />
                 <p className="flex flex-wrap items-center gap-2 text-sm tracking-[0.18em] text-gold uppercase">
-                  <time dateTime={m.month}>{formatMonth(m.month)}</time>
+                  <time dateTime={m.date}>{formatDate(m.date)}</time>
                   {m.key === latest.key ? (
                     <span className="rounded-full bg-maroon px-2 py-0.5 text-[0.65rem] tracking-[0.12em] text-cream">
                       {t("construction.latest")}
@@ -102,9 +175,13 @@ export function Construction() {
                 <h3 className="mt-1 text-xl font-semibold text-maroon">
                   {t(`construction.milestones.${m.key}.title`)}
                 </h3>
-                <p className="mt-2 leading-7 text-ink/80">
-                  {t(`construction.milestones.${m.key}.body`)}
-                </p>
+                <div className="mt-2 space-y-3 leading-7 text-ink/80">
+                  {paragraphs(`construction.milestones.${m.key}.body`).map(
+                    (text) => (
+                      <p key={text}>{text}</p>
+                    ),
+                  )}
+                </div>
                 {m.photos.length > 0 ? (
                   <ul className="mt-5 grid gap-4 sm:grid-cols-2">
                     {m.photos.map((photo) => (
@@ -114,15 +191,18 @@ export function Construction() {
                       >
                         <a
                           href={photo.src}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setEnlarged(photo);
+                          }}
+                          className="group relative block aspect-square cursor-zoom-in"
                         >
                           <Image
                             src={photo.src}
                             alt={t(`construction.${photo.alt}`)}
-                            width={photo.width}
-                            height={photo.height}
-                            className="h-auto w-full"
+                            fill
+                            sizes="(min-width: 768px) 360px, (min-width: 640px) 45vw, 90vw"
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
                           />
                         </a>
                       </li>
@@ -132,7 +212,34 @@ export function Construction() {
               </li>
             ))}
           </ol>
-          <p className="mt-12 text-center">
+        </div>
+      </section>
+
+      <section
+        className="bg-cream py-16 md:py-20"
+        aria-labelledby="construction-closing-heading"
+      >
+        <div className="mx-auto max-w-3xl px-5 text-center md:px-8">
+          <h2
+            id="construction-closing-heading"
+            className="text-2xl font-semibold text-maroon md:text-3xl"
+          >
+            {t("construction.closingTitle")}
+          </h2>
+          <div className="gold-rule mx-auto my-6 max-w-xs" />
+          <div className="space-y-4 leading-7 text-ink/80">
+            <p>{t("construction.closingP1")}</p>
+            <p>
+              <Trans
+                i18nKey="construction.closingP2"
+                components={{ b: <strong className="text-maroon" /> }}
+              />
+            </p>
+          </div>
+          <p className="mt-6 text-xl font-semibold text-maroon">
+            {t("construction.closingTagline")}
+          </p>
+          <p className="mt-10">
             <Link
               href="/contact"
               className="inline-flex items-center rounded-full bg-maroon px-6 py-2.5 text-sm font-medium tracking-wide text-cream uppercase hover:bg-maroon-deep"
@@ -142,6 +249,32 @@ export function Construction() {
           </p>
         </div>
       </section>
+
+      {enlarged ? (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={t(`construction.${enlarged.alt}`)}
+          onClick={() => setEnlarged(null)}
+          className="fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center bg-black/85 p-4"
+        >
+          <Image
+            src={enlarged.src}
+            alt={t(`construction.${enlarged.alt}`)}
+            width={enlarged.width}
+            height={enlarged.height}
+            className="max-h-[90vh] w-auto max-w-full rounded-lg object-contain"
+          />
+          <button
+            type="button"
+            onClick={() => setEnlarged(null)}
+            aria-label="Close"
+            className="absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/15 text-2xl leading-none text-white hover:bg-white/30"
+          >
+            ×
+          </button>
+        </div>
+      ) : null}
     </>
   );
 }
