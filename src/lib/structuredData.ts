@@ -1,4 +1,5 @@
 import { calendarGroups } from "./calendar";
+import { events, lastDay } from "./events";
 import { site } from "./site";
 
 const templeId = `${site.url}/#temple`;
@@ -136,4 +137,27 @@ export function festivalEventsJsonLd() {
       organizer: { "@type": "Organization", name: site.name, url: site.url },
     }));
   return { "@context": "https://schema.org", "@graph": events };
+}
+
+export function templeEventsJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@graph": events.map((event) => ({
+      "@type": "Event",
+      name: `${event.title} at ${site.name}`,
+      startDate: event.startDate,
+      endDate: lastDay(event),
+      eventStatus: "https://schema.org/EventScheduled",
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      description: `${event.description} ${event.time}.`,
+      image: [`${site.url}${event.poster.src}`],
+      isAccessibleForFree: true,
+      location: {
+        "@type": "HinduTemple",
+        name: site.name,
+        address: postalAddress,
+      },
+      organizer: { "@type": "Organization", name: site.name, url: site.url },
+    })),
+  };
 }

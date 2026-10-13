@@ -4,6 +4,7 @@ export type NavGroup = { key: string; items: NavLink[] };
 export const navigation: (NavLink | NavGroup)[] = [
   { href: "/", key: "home" },
   { href: "/about", key: "about" },
+  { href: "/events", key: "events" },
   {
     key: "mandir",
     items: [

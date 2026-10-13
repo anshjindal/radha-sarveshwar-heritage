@@ -2,6 +2,7 @@
   "nav": {
     "home": "Accueil",
     "about": "À propos",
+    "events": "Événements",
     "construction": "Développement du mandir",
     "contact": "Nous joindre",
     "googleListing": "Fiche Google",
@@ -25,6 +26,17 @@
     "visitCta": "Visiter",
     "imageAlt": "Radha Sarveshwar Heritage Centre à Norval, Ontario"
   },
+  "pranPratishtha": {
+    "eyebrow": "Inauguration du mandir",
+    "title": "Cérémonie de Pran Pratishtha du mandir",
+    "presence": "En la gracieuse présence de",
+    "datesLabel": "Dates",
+    "timingsLabel": "Horaire quotidien",
+    "body": "Tous les fidèles sont chaleureusement invités à l’inauguration du Radha Sarveshwar Heritage Centre et à la Pran Pratishtha des divinités, et à recevoir les bénédictions de Shri « Shriji » Maharaj.",
+    "postersCta": "Voir l’invitation",
+    "directionsCta": "Itinéraire",
+    "photoAlt": "Portrait de {{name}}"
+  },
   "about": {
     "eyebrow": "À propos",
     "title": "Temple hindou à Norval, Ontario",
@@ -38,32 +50,15 @@
       "imageAlt": "Pandit Mahesh Kumar Acharya portant une guirlande de soucis et un bonnet traditionnel"
     }
   },
-  "festivals": {
-    "eyebrow": "Événements du temple",
-    "title": "Festivals au RSHC",
-    "body": "Rejoignez-nous toute l’année pour le calendrier hindou sacré à Norval. Appelez ou écrivez pour la prochaine date d’utsav.",
-    "items": {
-      "janmashtami": {
-        "title": "Janmashtami",
-        "note": "Apparition de Krishna",
-        "alt": "Décorations de Janmashtami au Radha Sarveshwar Heritage Centre"
-      },
-      "diwali": {
-        "title": "Diwali",
-        "note": "Fête des lumières",
-        "alt": "Lampes Diwali au temple"
-      },
-      "holi": {
-        "title": "Holi",
-        "note": "Fête des couleurs",
-        "alt": "Couleurs de Holi au centre du patrimoine"
-      },
-      "radhashtami": {
-        "title": "Radhashtami",
-        "note": "Apparition de Shri Radha",
-        "alt": "Offrande de lotus et diya pour Radhashtami"
-      }
-    }
+  "events": {
+    "eyebrow": "Programmes et célébrations",
+    "title": "Événements et programmes",
+    "body": "Programmes, pujas et célébrations à venir au Radha Sarveshwar Heritage Centre. Tous les fidèles sont les bienvenus.",
+    "upcoming": "Événements à venir",
+    "past": "Événements passés",
+    "none": "Aucun événement à venir pour le moment. Veuillez appeler le temple pour connaître le prochain programme.",
+    "viewPoster": "Voir l’affiche complète",
+    "seeAll": "Voir tous les événements"
   },
   "calendar": {
     "eyebrow": "Dates sacrées",
@@ -105,6 +100,7 @@
     "body": "Le Radha Sarveshwar Heritage Centre se développe à Halton Hills comme lieu de culte, de seva, de communauté et de patrimoine culturel.\n\nLe parcours a commencé il y a plusieurs années, avec la vision partagée par des fidèles d'établir un centre spirituel dédié. Avec le temps, cette vision a trouvé un nouveau départ, et le projet prend forme peu à peu grâce aux bénédictions, au dévouement des fidèles et au soutien constant de la communauté.",
     "timelineTitle": "Notre parcours",
     "latest": "Nouveau",
+    "upcoming": "À venir",
     "milestones": {
       "visionBegins": {
         "title": "La vision prend naissance",
@@ -129,6 +125,14 @@
       "parkingWork": {
         "title": "Début de l'aménagement du stationnement",
         "body": "Les travaux d'aménagement d'un stationnement agrandi pour les fidèles ont commencé.\n\nLes premiers camions de résidus de planage d'asphalte recyclé sont arrivés au début des travaux de la surface du stationnement."
+      },
+      "recycledAsphalt": {
+        "title": "Asphalte recyclé posé pour le stationnement",
+        "body": "De l’asphalte recyclé a été posé sur le nouveau stationnement, offrant aux fidèles une surface ferme avant l’inauguration."
+      },
+      "pranPratishtha": {
+        "title": "Inauguration et Pran Pratishtha",
+        "body": "Le mandir est inauguré et la Pran Pratishtha des divinités est accomplie en la gracieuse présence de Jagadguru Nimbarkacharya Shri Shyamsharandevacharya Shri « Shriji » Maharaj.\n\nProgrammes quotidiens de 9 h à 12 h, Sandhya Aarti à 18 h. Tous les fidèles sont chaleureusement invités."
       }
     },
     "renovationPhotoAlt": "L’intérieur de la maison pendant la rénovation, avec la salle agrandie et les planchers protégés pour les travaux",
@@ -136,6 +140,8 @@
     "photo2Alt": "Vue d’ensemble des caisses de murtis de Jaipur dans l’allée, près du jardin de soucis",
     "parkingPhoto1Alt": "Camion à benne à côté d'un tas de résidus d'asphalte pour le nouveau stationnement",
     "parkingPhoto2Alt": "Résidus d'asphalte déchargés à l'arrière d'un camion à benne sur l'emplacement du nouveau stationnement",
+    "inaugurationPosterAlt": "Affiche d’invitation à l’inauguration et à la Pran Pratishtha, 14–19 octobre 2026",
+    "jajmaanPosterAlt": "Affiche listant les jajmaans qui accomplissent la Pran Pratishtha de chaque divinité",
     "pujaPhotoAlt": "Fidèles assis sur le tapis pendant la puja devant le darbar du mandir",
     "siteVisitPhotoAlt": "La propriété au crépuscule le 14 juillet 2025, avec des voitures garées dans l'allée de gravier",
     "closingTitle": "Le parcours continue",

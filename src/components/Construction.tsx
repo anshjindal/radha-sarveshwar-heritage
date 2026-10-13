@@ -2,13 +2,21 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import { todayInToronto } from "@/lib/events";
+
+const subscribe = () => () => {};
 
 type Photo = { src: string; alt: string; width: number; height: number };
 
-/** `date` is YYYY, YYYY-MM, or YYYY-MM-DD to show the exact day. */
-const milestones: { key: string; date: string; photos: Photo[] }[] = [
+/** `date` is YYYY, YYYY-MM, or YYYY-MM-DD to show the exact day; `endDate` (YYYY-MM-DD) for multi-day milestones. */
+const milestones: {
+  key: string;
+  date: string;
+  endDate?: string;
+  photos: Photo[];
+}[] = [
   { key: "visionBegins", date: "2022", photos: [] },
   {
     key: "siteVisit",
@@ -82,6 +90,26 @@ const milestones: { key: string; date: string; photos: Photo[] }[] = [
       },
     ],
   },
+  { key: "recycledAsphalt", date: "2026-10-05", photos: [] },
+  {
+    key: "pranPratishtha",
+    date: "2026-10-14",
+    endDate: "2026-10-19",
+    photos: [
+      {
+        src: "/images/events/inauguration-2026-invitation.png",
+        alt: "inaugurationPosterAlt",
+        width: 818,
+        height: 1024,
+      },
+      {
+        src: "/images/events/inauguration-2026-jajmaans.png",
+        alt: "jajmaanPosterAlt",
+        width: 682,
+        height: 1024,
+      },
+    ],
+  },
 ];
 
 export function Construction() {
@@ -104,8 +132,22 @@ export function Construction() {
       : date.length > 7
         ? dayMonthYear.format(new Date(`${date}T00:00:00Z`))
         : monthYear.format(new Date(`${date}-01T00:00:00Z`));
+  const dayMonth = new Intl.DateTimeFormat(lang === "en" ? "en-GB" : lang, {
+    day: "numeric",
+    month: "long",
+    timeZone: "UTC",
+  });
+  const formatMilestoneDate = (m: (typeof milestones)[number]) =>
+    m.endDate
+      ? `${dayMonth.format(new Date(`${m.date}T00:00:00Z`))} – ${formatDate(m.endDate)}`
+      : formatDate(m.date);
   const paragraphs = (key: string) => t(key).split("\n\n");
-  const latest = milestones[milestones.length - 1];
+  const today = useSyncExternalStore(subscribe, todayInToronto, () => null);
+  const isUpcoming = (m: (typeof milestones)[number]) =>
+    today !== null && m.date > today;
+  const latest =
+    milestones.findLast((m) => !isUpcoming(m)) ??
+    milestones[milestones.length - 1];
   const [enlarged, setEnlarged] = useState<Photo | null>(null);
 
   useEffect(() => {
@@ -162,11 +204,21 @@ export function Construction() {
               <li key={m.key} className="relative pb-10 pl-8 last:pb-0">
                 <span
                   aria-hidden
-                  className={`absolute top-1.5 -left-[9px] h-4 w-4 rounded-full border-2 border-ivory ${m.key === latest.key ? "bg-maroon" : "bg-gold"}`}
+                  className={`absolute top-1.5 -left-[9px] h-4 w-4 rounded-full border-2 ${
+                    isUpcoming(m)
+                      ? "border-gold bg-ivory"
+                      : m.key === latest.key
+                        ? "border-ivory bg-maroon"
+                        : "border-ivory bg-gold"
+                  }`}
                 />
                 <p className="flex flex-wrap items-center gap-2 text-sm tracking-[0.18em] text-gold uppercase">
-                  <time dateTime={m.date}>{formatDate(m.date)}</time>
-                  {m.key === latest.key ? (
+                  <time dateTime={m.date}>{formatMilestoneDate(m)}</time>
+                  {isUpcoming(m) ? (
+                    <span className="rounded-full border border-gold px-2 py-0.5 text-[0.65rem] tracking-[0.12em] text-maroon">
+                      {t("construction.upcoming")}
+                    </span>
+                  ) : m.key === latest.key ? (
                     <span className="rounded-full bg-maroon px-2 py-0.5 text-[0.65rem] tracking-[0.12em] text-cream">
                       {t("construction.latest")}
                     </span>

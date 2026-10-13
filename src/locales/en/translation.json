@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "about": "About Us",
+    "events": "Events",
     "construction": "Mandir Development",
     "contact": "Contact Us",
     "googleListing": "Google listing",
@@ -25,6 +26,17 @@
     "visitCta": "Visit",
     "imageAlt": "Radha Sarveshwar Heritage Centre temple grounds in Norval, Ontario"
   },
+  "pranPratishtha": {
+    "eyebrow": "Mandir inauguration",
+    "title": "Mandir Pran Pratishtha Ceremony",
+    "presence": "In the gracious presence of",
+    "datesLabel": "Dates",
+    "timingsLabel": "Daily timings",
+    "body": "All devotees are warmly invited to the inauguration of Radha Sarveshwar Heritage Centre and the Pran Pratishtha of the deities, and to receive the blessings of Shri “Shriji” Maharaj.",
+    "postersCta": "View invitation",
+    "directionsCta": "Get directions",
+    "photoAlt": "Portrait of {{name}}"
+  },
   "about": {
     "eyebrow": "About us",
     "title": "Hindu temple in Norval, Ontario",
@@ -38,32 +50,15 @@
       "imageAlt": "Pandit Mahesh Kumar Acharya wearing a marigold garland and a traditional cap"
     }
   },
-  "festivals": {
-    "eyebrow": "Temple events",
-    "title": "Festivals at RSHC",
-    "body": "Join us through the year for the sacred Hindu calendar in Norval. Call or email for the next utsav date.",
-    "items": {
-      "janmashtami": {
-        "title": "Janmashtami",
-        "note": "Krishna’s appearance",
-        "alt": "Janmashtami celebration decorations at Radha Sarveshwar Heritage Centre"
-      },
-      "diwali": {
-        "title": "Diwali",
-        "note": "Festival of lights",
-        "alt": "Diwali oil lamps and lights at the temple"
-      },
-      "holi": {
-        "title": "Holi",
-        "note": "Festival of colours",
-        "alt": "Holi festival colours at the heritage centre"
-      },
-      "radhashtami": {
-        "title": "Radhashtami",
-        "note": "Shri Radha’s appearance",
-        "alt": "Lotus and diya offering for Radhashtami"
-      }
-    }
+  "events": {
+    "eyebrow": "Programs & celebrations",
+    "title": "Events & Programs",
+    "body": "Upcoming programs, pujas and celebrations at Radha Sarveshwar Heritage Centre. All devotees are welcome.",
+    "upcoming": "Upcoming events",
+    "past": "Past events",
+    "none": "No upcoming events are listed right now. Please call the temple for the next program.",
+    "viewPoster": "View full poster",
+    "seeAll": "See all events"
   },
   "calendar": {
     "eyebrow": "Sacred dates",
@@ -105,6 +100,7 @@
     "body": "Radha Sarveshwar Heritage Centre is being developed as a place of worship, seva, community, and cultural heritage in Halton Hills.\n\nThe journey began several years ago with a vision shared by devotees to establish a dedicated spiritual centre. Over time, that vision found a new beginning, and the project is now steadily taking shape through the blessings, the dedication of devotees, and the continued support of the community.",
     "timelineTitle": "Our Journey",
     "latest": "Latest",
+    "upcoming": "Upcoming",
     "milestones": {
       "visionBegins": {
         "title": "The Vision Begins",
@@ -129,6 +125,14 @@
       "parkingWork": {
         "title": "Parking Development Begins",
         "body": "Work began on developing an expanded parking area for devotees.\n\nThe first truckloads of recycled asphalt millings arrived as work on the parking surface commenced."
+      },
+      "recycledAsphalt": {
+        "title": "Recycled Asphalt Laid for Parking",
+        "body": "Recycled asphalt was laid across the new parking area, giving devotees a firm surface to park on ahead of the inauguration."
+      },
+      "pranPratishtha": {
+        "title": "Inauguration & Pran Pratishtha",
+        "body": "The mandir is inaugurated and the Pran Pratishtha of the deities is performed in the gracious presence of Jagadguru Nimbarkacharya Shri Shyamsharandevacharya Shri “Shriji” Maharaj.\n\nDaily programs run from 9:00 AM to 12:00 PM, with Sandhya Aarti at 6:00 PM. All devotees are warmly invited."
       }
     },
     "renovationPhotoAlt": "Inside the house during renovation, with the expanded hall and floors covered for the work",
@@ -136,6 +140,8 @@
     "photo2Alt": "Wide view of the murti crates from Jaipur on the driveway beside the marigold garden",
     "parkingPhoto1Alt": "Dump truck beside a pile of asphalt millings for the new parking area",
     "parkingPhoto2Alt": "Asphalt millings unloaded from the back of a dump truck onto the site of the new parking area",
+    "inaugurationPosterAlt": "Invitation poster for the inauguration and Pran Pratishtha, 14–19 October 2026",
+    "jajmaanPosterAlt": "Poster listing the jajmaans performing the Pran Pratishtha of each deity",
     "pujaPhotoAlt": "Devotees seated on the carpet during puja in front of the mandir darbar",
     "siteVisitPhotoAlt": "The property at dusk on 14 July 2025, with cars parked on the gravel driveway",
     "closingTitle": "The Journey Continues",
