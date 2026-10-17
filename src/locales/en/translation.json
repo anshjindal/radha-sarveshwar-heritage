@@ -58,7 +58,9 @@
     "past": "Past events",
     "none": "No upcoming events are listed right now. Please call the temple for the next program.",
     "viewPoster": "View full poster",
-    "seeAll": "See all events"
+    "seeAll": "See all events",
+    "featured": "Main ceremony",
+    "viewPosterHi": "Hindi poster"
   },
   "calendar": {
     "eyebrow": "Sacred dates",
@@ -142,6 +144,8 @@
     "parkingPhoto2Alt": "Asphalt millings unloaded from the back of a dump truck onto the site of the new parking area",
     "inaugurationPosterAlt": "Invitation poster for the inauguration and Pran Pratishtha, 14–19 October 2026",
     "jajmaanPosterAlt": "Poster listing the jajmaans performing the Pran Pratishtha of each deity",
+    "grandPranPratishthaPosterAlt": "Grand Pran Pratishtha poster, 18 October 2026 at 11:00 AM",
+    "grandPranPratishthaPosterHiAlt": "भव्य प्राण प्रतिष्ठा poster in Hindi, 18 October 2026 at 11:00 AM",
     "pujaPhotoAlt": "Devotees seated on the carpet during puja in front of the mandir darbar",
     "siteVisitPhotoAlt": "The property at dusk on 14 July 2025, with cars parked on the gravel driveway",
     "closingTitle": "The Journey Continues",

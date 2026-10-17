@@ -1,3 +1,12 @@
+export type EventPoster = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+  /** Optional language tag so the UI can prefer a matching poster */
+  lang?: string;
+};
+
 export type TempleEvent = {
   slug: string;
   title: string;
@@ -6,10 +15,39 @@ export type TempleEvent = {
   endDate?: string;
   time: string;
   description: string;
-  poster: { src: string; width: number; height: number; alt: string };
+  /** Featured events sort first on the events page and homepage */
+  featured?: boolean;
+  poster: EventPoster;
+  /** Extra language / variant posters (shown as secondary links) */
+  altPosters?: EventPoster[];
 };
 
 export const events: TempleEvent[] = [
+  {
+    slug: "grand-pran-pratishtha-2026",
+    title: "Grand Pran Pratishtha",
+    startDate: "2026-10-18",
+    time: "11:00 AM",
+    featured: true,
+    description:
+      "The main Pran Pratishtha ceremony of the deities, in the gracious presence of Jagadguru Nimbarkacharya Shri Shyamsharandevacharya Shri “Shriji” Maharaj and Golokdham Peethadheeshwar Pujya Shri Gopalsharan Devacharyaji Maharaj, with acharyas from other temples and devotees.",
+    poster: {
+      src: "/images/events/grand-pran-pratishtha-2026-en.png",
+      width: 790,
+      height: 1024,
+      alt: "Grand Pran Pratishtha poster, 18 October 2026 at 11:00 AM at Radha Sarveshwar Heritage Centre",
+      lang: "en",
+    },
+    altPosters: [
+      {
+        src: "/images/events/grand-pran-pratishtha-2026-hi.png",
+        width: 723,
+        height: 1024,
+        alt: "भव्य प्राण प्रतिष्ठा पोस्टर, 18 अक्टूबर 2026 प्रातः 11:00 बजे",
+        lang: "hi",
+      },
+    ],
+  },
   {
     slug: "inauguration-2026",
     title: "Radha Sarveshwar Heritage Centre Inauguration",
@@ -92,6 +130,15 @@ export function todayInToronto() {
 
 export const lastDay = (e: TempleEvent) => e.endDate ?? e.startDate;
 
+/** Prefer a poster matching the active language when one exists. */
+export function posterForLang(e: TempleEvent, lang: string): EventPoster {
+  if (lang === "hi" && e.altPosters) {
+    const hi = e.altPosters.find((p) => p.lang === "hi");
+    if (hi) return hi;
+  }
+  return e.poster;
+}
+
 /** Avoids Intl.formatRange, whose separator spacing differs between Node and browsers (hydration mismatch). */
 export function formatEventDate(e: TempleEvent, lang: string) {
   const options = { timeZone: "UTC" } as const;
@@ -111,10 +158,15 @@ export function formatEventDate(e: TempleEvent, lang: string) {
   return `${dayMonth.format(start)} – ${full.format(new Date(`${e.endDate}T00:00:00Z`))}`;
 }
 
+function byFeaturedThenDate(a: TempleEvent, b: TempleEvent) {
+  if (!!a.featured !== !!b.featured) return a.featured ? -1 : 1;
+  return a.startDate.localeCompare(b.startDate);
+}
+
 export function splitEvents(today: string | null) {
   const upcoming = events
     .filter((e) => today === null || lastDay(e) >= today)
-    .sort((a, b) => a.startDate.localeCompare(b.startDate));
+    .sort(byFeaturedThenDate);
   const past = events
     .filter((e) => today !== null && lastDay(e) < today)
     .sort((a, b) => b.startDate.localeCompare(a.startDate));

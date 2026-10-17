@@ -97,6 +97,18 @@ const milestones: {
     endDate: "2026-10-19",
     photos: [
       {
+        src: "/images/events/grand-pran-pratishtha-2026-en.png",
+        alt: "grandPranPratishthaPosterAlt",
+        width: 790,
+        height: 1024,
+      },
+      {
+        src: "/images/events/grand-pran-pratishtha-2026-hi.png",
+        alt: "grandPranPratishthaPosterHiAlt",
+        width: 723,
+        height: 1024,
+      },
+      {
         src: "/images/events/inauguration-2026-invitation.png",
         alt: "inaugurationPosterAlt",
         width: 818,

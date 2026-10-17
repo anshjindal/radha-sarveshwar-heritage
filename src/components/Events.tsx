@@ -6,6 +6,7 @@ import { useSyncExternalStore } from "react";
 import { useTranslation } from "react-i18next";
 import {
   formatEventDate,
+  posterForLang,
   splitEvents,
   todayInToronto,
   type TempleEvent,
@@ -17,34 +18,46 @@ function EventCard({
   event,
   formatDate,
   past,
+  lang,
 }: {
   event: TempleEvent;
   formatDate: (e: TempleEvent) => string;
   past?: boolean;
+  lang: string;
 }) {
   const { t } = useTranslation();
+  const poster = posterForLang(event, lang);
+  const otherPosters = [event.poster, ...(event.altPosters ?? [])].filter(
+    (p) => p.src !== poster.src,
+  );
 
   return (
     <li
-      className={`flex flex-col overflow-hidden rounded-2xl bg-cream shadow-md ${past ? "opacity-80" : ""}`}
+      className={`flex flex-col overflow-hidden rounded-2xl bg-cream shadow-md ${past ? "opacity-80" : ""} ${event.featured ? "ring-2 ring-gold/60 sm:col-span-2 lg:col-span-1" : ""}`}
     >
       <a
-        href={event.poster.src}
+        href={poster.src}
         target="_blank"
         rel="noopener"
         className="block bg-maroon-deep"
         aria-label={`${t("events.viewPoster")}: ${event.title}`}
       >
         <Image
-          src={event.poster.src}
-          alt={event.poster.alt}
-          width={event.poster.width}
-          height={event.poster.height}
+          src={poster.src}
+          alt={poster.alt}
+          width={poster.width}
+          height={poster.height}
           sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
           className="aspect-[2/3] w-full object-contain transition hover:scale-[1.02]"
+          priority={event.featured}
         />
       </a>
       <div className="flex flex-1 flex-col px-5 py-4">
+        {event.featured ? (
+          <p className="mb-1 text-[0.65rem] font-bold tracking-[0.2em] text-gold uppercase">
+            {t("events.featured")}
+          </p>
+        ) : null}
         <p className="text-xs tracking-[0.18em] text-gold uppercase">
           <time dateTime={event.startDate}>{formatDate(event)}</time>
         </p>
@@ -53,14 +66,29 @@ function EventCard({
         </h3>
         <p className="mt-1 text-sm font-medium text-maroon/80">{event.time}</p>
         <p className="mt-3 text-sm text-ink/75">{event.description}</p>
-        <a
-          href={event.poster.src}
-          target="_blank"
-          rel="noopener"
-          className="mt-4 self-start text-sm font-semibold text-maroon underline decoration-gold decoration-2 underline-offset-4 hover:text-gold"
-        >
-          {t("events.viewPoster")}
-        </a>
+        <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
+          <a
+            href={poster.src}
+            target="_blank"
+            rel="noopener"
+            className="self-start text-sm font-semibold text-maroon underline decoration-gold decoration-2 underline-offset-4 hover:text-gold"
+          >
+            {t("events.viewPoster")}
+          </a>
+          {otherPosters.map((p) => (
+            <a
+              key={p.src}
+              href={p.src}
+              target="_blank"
+              rel="noopener"
+              className="self-start text-sm font-semibold text-maroon/70 underline decoration-gold/50 decoration-2 underline-offset-4 hover:text-gold"
+            >
+              {p.lang === "hi"
+                ? t("events.viewPosterHi")
+                : t("events.viewPoster")}
+            </a>
+          ))}
+        </div>
       </div>
     </li>
   );
@@ -117,6 +145,7 @@ export function Events({
                 key={event.slug}
                 event={event}
                 formatDate={formatDate}
+                lang={lang}
               />
             ))}
           </ul>
@@ -145,6 +174,7 @@ export function Events({
                   event={event}
                   formatDate={formatDate}
                   past
+                  lang={lang}
                 />
               ))}
             </ul>

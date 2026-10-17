@@ -7,7 +7,9 @@ import { ServiceArea } from "@/components/ServiceArea";
 import { events } from "@/lib/events";
 import { templeJsonLd } from "@/lib/structuredData";
 
-const pranPratishtha = events.find((e) => e.slug === "pran-pratishtha-2026");
+const pranPratishtha = events.find(
+  (e) => e.slug === "grand-pran-pratishtha-2026",
+);
 
 export default function Home() {
   return (

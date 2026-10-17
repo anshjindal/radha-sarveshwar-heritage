@@ -58,7 +58,9 @@
     "past": "Événements passés",
     "none": "Aucun événement à venir pour le moment. Veuillez appeler le temple pour connaître le prochain programme.",
     "viewPoster": "Voir l’affiche complète",
-    "seeAll": "Voir tous les événements"
+    "seeAll": "Voir tous les événements",
+    "featured": "Cérémonie principale",
+    "viewPosterHi": "Affiche en hindi"
   },
   "calendar": {
     "eyebrow": "Dates sacrées",
@@ -142,6 +144,8 @@
     "parkingPhoto2Alt": "Résidus d'asphalte déchargés à l'arrière d'un camion à benne sur l'emplacement du nouveau stationnement",
     "inaugurationPosterAlt": "Affiche d’invitation à l’inauguration et à la Pran Pratishtha, 14–19 octobre 2026",
     "jajmaanPosterAlt": "Affiche listant les jajmaans qui accomplissent la Pran Pratishtha de chaque divinité",
+    "grandPranPratishthaPosterAlt": "Affiche Grand Pran Pratishtha, 18 octobre 2026 à 11 h",
+    "grandPranPratishthaPosterHiAlt": "Affiche Grand Pran Pratishtha en hindi, 18 octobre 2026 à 11 h",
     "pujaPhotoAlt": "Fidèles assis sur le tapis pendant la puja devant le darbar du mandir",
     "siteVisitPhotoAlt": "La propriété au crépuscule le 14 juillet 2025, avec des voitures garées dans l'allée de gravier",
     "closingTitle": "Le parcours continue",
