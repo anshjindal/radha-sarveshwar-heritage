@@ -305,9 +305,7 @@ export function Construction() {
           </p>
           <p className="mt-10">
             <a
-              href={site.address.googleListingUrl}
-              target="_blank"
-              rel="noopener"
+              href={`mailto:${site.email}`}
               className="inline-flex items-center rounded-full bg-maroon px-6 py-2.5 text-sm font-medium tracking-wide text-cream uppercase hover:bg-maroon-deep"
             >
               {t("construction.visitCta")}

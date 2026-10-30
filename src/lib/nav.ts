@@ -8,7 +8,7 @@ export const navigation: (NavLink | NavGroup)[] = [
   {
     key: "mandir",
     items: [
-      { href: "/construction", key: "construction" },
+      // Hidden for now: { href: "/construction", key: "construction" },
       { href: "/calendar", key: "calendar" },
     ],
   },

@@ -9,7 +9,7 @@
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
     "menu": "Menu",
-    "mandir": "Mandir",
+    "mandir": "Ressources",
     "getInvolved": "S’impliquer",
     "supportUs": "Nous soutenir",
     "calendar": "Calendrier religieux",
@@ -21,10 +21,10 @@
   },
   "hero": {
     "welcome": "Bienvenue à",
-    "body": "Un temple hindou et centre patrimonial à quelques minutes de Brampton et Georgetown — pour le culte, les fêtes et le Sanatan Dharma dans la RGT et le Sud de l’Ontario.",
+    "body": "Un organisme à but non lucratif voué au bien-être et à la promotion du Sanatan Dharma — par des programmes spirituels, la culture, la seva et la communauté dans la RGT et le Sud de l’Ontario.",
     "aboutCta": "À propos",
-    "visitCta": "Visiter",
-    "imageAlt": "Radha Sarveshwar Heritage Centre en Ontario"
+    "visitCta": "S'impliquer",
+    "imageAlt": "Radha Sarveshwar Heritage Centre"
   },
   "pranPratishtha": {
     "eyebrow": "Inauguration du mandir",
@@ -39,14 +39,14 @@
   },
   "about": {
     "eyebrow": "À propos",
-    "title": "Temple hindou en Ontario",
-    "p1": "Le Radha Sarveshwar Heritage Centre est un temple hindou et foyer culturel près de Brampton, en Ontario. Dédié à Shri Radha Sarveshwar, nous accueillons les dévots de la grande région de Toronto pour le culte, les festivals et la communauté.",
-    "p2": "Notre mission est de préserver et partager le Sanatan Dharma — un lieu où les familles se réunissent, où les enfants grandissent dans la culture, et où les visiteurs trouvent la paix.",
-    "imageAlt": "Le bâtiment et le terrain du mandir Radha Sarveshwar Heritage Centre en Ontario",
+    "title": "Au service du Sanatan Dharma en Ontario",
+    "p1": "Le Radha Sarveshwar Heritage Centre est un organisme à but non lucratif voué au bien-être et à la promotion du Sanatan Dharma. Inspirés par Shri Radha Sarveshwar, nous rassemblons des familles de toute la région du Grand Toronto par des programmes spirituels, des pujas, la seva et la vie communautaire.",
+    "p2": "Notre mission est de préserver et de partager le Sanatan Dharma — aider les familles à rester liées à leurs racines, les enfants à grandir dans la culture et les valeurs, et chacun à trouver la paix par la bhakti et la seva.",
+    "imageAlt": "Radha Sarveshwar Heritage Centre",
     "pandit": {
-      "eyebrow": "Notre pandit résident",
+      "eyebrow": "Notre pandit",
       "name": "Pandit Mahesh Kumar Acharya",
-      "body": "Pandit Mahesh Kumar Acharya est le pandit résident du Radha Sarveshwar Heritage Centre. Il dirige l’aarti et la puja quotidiennes, les célébrations des fêtes et les cérémonies familiales, et guide les fidèles dans les traditions du Sanatan Dharma avec chaleur et dévotion.",
+      "body": "Pandit Mahesh Kumar Acharya est le pandit du Radha Sarveshwar Heritage Centre. Il célèbre pujas, havans, kathas et cérémonies familiales, et guide les fidèles dans les traditions du Sanatan Dharma avec chaleur et dévotion.",
       "imageAlt": "Pandit Mahesh Kumar Acharya portant une guirlande de soucis et un bonnet traditionnel"
     }
   },
@@ -56,7 +56,7 @@
     "body": "Programmes, pujas et célébrations à venir au Radha Sarveshwar Heritage Centre. Tous les fidèles sont les bienvenus.",
     "upcoming": "Événements à venir",
     "past": "Événements passés",
-    "none": "Aucun événement à venir pour le moment. Veuillez appeler le temple pour connaître le prochain programme.",
+    "none": "Aucun programme n'est annoncé pour le moment. Contactez-nous pour plus de détails.",
     "viewPoster": "Voir l’affiche complète",
     "seeAll": "Voir tous les événements",
     "featured": "Cérémonie principale",
@@ -65,7 +65,7 @@
   "calendar": {
     "eyebrow": "Dates sacrées",
     "title": "Calendrier religieux {{year}}",
-    "body": "Shradh, Navratri, le mois de Kartik et les autres dates sacrées célébrées au temple jusqu’en décembre.",
+    "body": "Shradh, Navratri, le mois de Kartik et d'autres dates sacrées jusqu'en décembre.",
     "downloadPoster": "Télécharger l’affiche du calendrier",
     "date": "Date",
     "day": "Jour",
@@ -81,7 +81,7 @@
   "samagri": {
     "eyebrow": "Préparer la puja",
     "title": "Pooja Samagri",
-    "body": "Listes des articles à apporter pour la puja et le Rudra Abhishek au temple. Touchez une liste pour l’ouvrir en plein format.",
+    "body": "Listes des articles à préparer pour la puja et le Rudra Abhishek. Touchez une liste pour l'ouvrir en grand.",
     "download": "Télécharger",
     "items": {
       "pooja": {
@@ -157,7 +157,7 @@
   "contact": {
     "eyebrow": "Nous joindre",
     "title": "Contact",
-    "body": "Pour toute question ou visite, contactez-nous par téléphone ou courriel. Ouvert tous les jours {{hours}}.",
+    "body": "Une question, envie de faire du bénévolat ou de réserver une puja ? Joignez-nous par téléphone ou par courriel.",
     "phone": "Téléphone",
     "location": "Emplacement du temple",
     "email": "Courriel",
@@ -168,7 +168,7 @@
     "mapTitle": "Carte vers Radha Sarveshwar Heritage Centre"
   },
   "footer": {
-    "blurb": "Un temple hindou et centre culturel qui accueille les fidèles de Brampton, Georgetown, Mississauga, Milton, Caledon et de tout le Sud de l’Ontario.",
+    "blurb": "Un organisme à but non lucratif pour le bien-être et la promotion du Sanatan Dharma, au service des familles de Brampton, Georgetown, Mississauga, Milton, Caledon et de tout le Sud de l’Ontario.",
     "navigation": "Navigation",
     "getInTouch": "Nous joindre",
     "daily": "Tous les jours {{hours}}",
@@ -180,9 +180,9 @@
     "hoursLabel": "Ouvert tous les jours"
   },
   "serviceArea": {
-    "eyebrow": "Nous rendre visite",
-    "title": "Un temple hindou près de Brampton",
-    "body": "Le Radha Sarveshwar Heritage Centre se trouve entre Brampton et Georgetown. Les fidèles viennent de Peel, la région du Grand Toronto et le Sud de l’Ontario pour le darshan, la puja et les fêtes.",
-    "directionsCta": "Itinéraire"
+    "eyebrow": "Notre communauté",
+    "title": "Au service des familles de la RGT",
+    "body": "Le Radha Sarveshwar Heritage Centre sert les fidèles de Brampton, Georgetown, Peel, la région du Grand Toronto et le Sud de l’Ontario par des programmes spirituels, des pujas, la seva et des activités culturelles.",
+    "directionsCta": "Nous joindre"
   }
 }

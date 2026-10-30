@@ -5,15 +5,15 @@ import { site } from "@/lib/site";
 import { breadcrumbJsonLd } from "@/lib/structuredData";
 
 export const metadata = pageMetadata({
-  title: "Contact & Directions",
-  description: `Contact our Hindu temple near Brampton and Georgetown. Open daily ${site.hours.time}. Call ${site.phones[0].display}.`,
+  title: "Contact Us",
+  description: `Contact Radha Sarveshwar Heritage Centre to book a puja, volunteer or support our work. Call ${site.phones[0].display}.`,
   path: "/contact",
 });
 
 export default function ContactPage() {
   return (
     <main>
-      <JsonLd data={breadcrumbJsonLd("Contact & Directions", "/contact")} />
+      <JsonLd data={breadcrumbJsonLd("Contact Us", "/contact")} />
       <Contact />
     </main>
   );

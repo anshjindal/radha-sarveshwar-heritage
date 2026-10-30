@@ -20,10 +20,10 @@ export function Contact() {
         </h1>
         <div className="gold-rule mx-auto my-6 max-w-xs" />
         <p className="mx-auto max-w-2xl text-center text-ink/75">
-          {t("contact.body", { hours: site.hours.time })}
+          {t("contact.body")}
         </p>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-3">
+        <div className="mt-12 grid gap-4 md:grid-cols-2">
           <article className="rounded-2xl border border-gold/30 bg-cream p-6 text-center">
             <p className="text-xs tracking-[0.18em] text-maroon uppercase">
               {t("contact.phone")}
@@ -44,20 +44,6 @@ export function Contact() {
 
           <article className="rounded-2xl border border-gold/30 bg-cream p-6 text-center">
             <p className="text-xs tracking-[0.18em] text-maroon uppercase">
-              {t("contact.location")}
-            </p>
-            <a
-              href={site.address.googleListingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-block text-sm font-medium text-gold hover:text-maroon"
-            >
-              {t("contact.viewOnGoogle")}
-            </a>
-          </article>
-
-          <article className="rounded-2xl border border-gold/30 bg-cream p-6 text-center">
-            <p className="text-xs tracking-[0.18em] text-maroon uppercase">
               {t("contact.email")}
             </p>
             <a
@@ -66,21 +52,10 @@ export function Contact() {
             >
               {site.email}
             </a>
-            <p className="mt-2 text-sm text-ink/70">
-              {t("common.hoursLabel")} {site.hours.time}
-            </p>
           </article>
         </div>
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a
-            href={site.address.googleListingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-maroon px-5 py-2.5 text-sm font-medium text-cream hover:bg-maroon-deep"
-          >
-            {t("contact.openGoogleListing")}
-          </a>
           <a
             href={site.phones[0].href}
             className="rounded-full border border-maroon/20 px-5 py-2.5 text-sm font-medium text-maroon hover:border-gold"

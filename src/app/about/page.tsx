@@ -5,8 +5,8 @@ import { site } from "@/lib/site";
 import { breadcrumbJsonLd } from "@/lib/structuredData";
 
 export const metadata = pageMetadata({
-  title: "About Our Hindu Temple near Brampton",
-  description: `Hindu temple minutes from Brampton — dedicated to Shri Radha Sarveshwar and Sanatan Dharma, with resident pandit ${site.pandit.name}.`,
+  title: "About Us",
+  description: `A non-profit organization dedicated to Shri Radha Sarveshwar and the promotion of Sanatan Dharma across the GTA, with ${site.pandit.name}.`,
   path: "/about",
   image: { url: "/images/mandir-exterior.jpg", width: 683, height: 512 },
 });

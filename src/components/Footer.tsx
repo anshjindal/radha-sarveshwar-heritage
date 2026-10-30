@@ -52,14 +52,6 @@ export function Footer() {
                 </Link>
               ) : null,
             )}
-            <a
-              href={site.address.googleListingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gold-light"
-            >
-              {t("nav.googleListing")}
-            </a>
           </nav>
         </div>
 
@@ -105,9 +97,6 @@ export function Footer() {
               </a>
             </p>
           </div>
-          <p className="mt-3 text-sm text-cream/70">
-            {t("footer.daily", { hours: site.hours.time })}
-          </p>
         </div>
       </div>
       <div className="border-t border-cream/10">

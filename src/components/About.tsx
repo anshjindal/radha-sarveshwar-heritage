@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import { site } from "@/lib/site";
 
 export function About() {
   const { t } = useTranslation();
@@ -24,9 +23,6 @@ export function About() {
             <div className="gold-rule my-6 max-w-xs" />
             <p className="text-base leading-8 text-ink/80">{t("about.p1")}</p>
             <p className="mt-4 text-base leading-8 text-ink/80">{t("about.p2")}</p>
-            <p className="mt-6 text-sm font-semibold tracking-wide text-maroon uppercase">
-              {t("common.hoursLabel")}: {site.hours.time}
-            </p>
           </div>
           <Image
             src="/images/mandir-exterior.jpg"

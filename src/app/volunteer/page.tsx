@@ -4,8 +4,8 @@ import { pageMetadata } from "@/lib/seo";
 import { breadcrumbJsonLd } from "@/lib/structuredData";
 
 export const metadata = pageMetadata({
-  title: "Volunteer at Our Hindu Temple",
-  description: `Volunteer at our Hindu temple near Brampton — temple seva, festivals, langar kitchen, renovation help, youth programs and outreach.`,
+  title: "Volunteer With Us",
+  description: `Volunteer with Radha Sarveshwar Heritage Centre — program seva, festivals, prasad and langar, youth and culture programs and outreach across the GTA.`,
   path: "/volunteer",
 });
 

@@ -10,7 +10,6 @@ import {
   todayInToronto,
   type TempleEvent,
 } from "@/lib/events";
-import { site } from "@/lib/site";
 
 const subscribe = () => () => {};
 
@@ -89,14 +88,6 @@ export function PranPratishtha({ event }: { event: TempleEvent }) {
             >
               {t("pranPratishtha.postersCta")}
             </Link>
-            <a
-              href={site.address.googleListingUrl}
-              target="_blank"
-              rel="noopener"
-              className="rounded-full border border-cream/50 px-6 py-3 text-sm font-semibold tracking-wide text-cream uppercase hover:border-gold hover:text-gold-light"
-            >
-              {t("pranPratishtha.directionsCta")}
-            </a>
           </div>
         </div>
       </div>

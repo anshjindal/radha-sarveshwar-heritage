@@ -4,14 +4,14 @@ import { pageMetadata } from "@/lib/seo";
 import { breadcrumbJsonLd } from "@/lib/structuredData";
 
 export const metadata = pageMetadata({
-  title: "Donate to Our Hindu Temple",
-  description: `Donate to our Hindu temple near Brampton — support the mandir renovation, 22 murtis from Jaipur, daily puja and festivals.`,
+  title: "Donate",
+  description: `Support Radha Sarveshwar Heritage Centre, a non-profit promoting Sanatan Dharma — spiritual programs, pujas, festivals and community seva across the GTA.`,
   path: "/donate",
 });
 
 const cards = [
-  { key: "construction", icon: "🛕" },
-  { key: "murtis", icon: "🕉️" },
+  { key: "construction", icon: "📿" },
+  { key: "murtis", icon: "🤝" },
   { key: "dailyPuja", icon: "🪔" },
   { key: "festivals", icon: "🎉" },
 ] as const;
@@ -20,11 +20,7 @@ export default function DonatePage() {
   return (
     <main>
       <JsonLd data={breadcrumbJsonLd("Donate", "/donate")} />
-      <InfoPage
-        ns="donate"
-        cards={cards}
-        link={{ href: "/construction", labelKey: "nav.construction" }}
-      />
+      <InfoPage ns="donate" cards={cards} />
     </main>
   );
 }

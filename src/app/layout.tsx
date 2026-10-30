@@ -14,7 +14,7 @@ const sourceSans = Source_Sans_3({
   display: "swap",
 });
 
-const titleDefault = `${site.name} | Hindu Temple near Brampton`;
+const titleDefault = `${site.name} | Non-profit for Sanatan Dharma in Ontario`;
 
 export const viewport: Viewport = {
   themeColor: "#4a121c",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: `${site.name} — Hindu temple near Brampton, Ontario`,
+        alt: `${site.name} — non-profit for the promotion of Sanatan Dharma`,
       },
     ],
   },

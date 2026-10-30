@@ -2,7 +2,7 @@ import { calendarGroups } from "./calendar";
 import { events, lastDay } from "./events";
 import { site } from "./site";
 
-const templeId = `${site.url}/#temple`;
+const templeId = `${site.url}/#organization`;
 const websiteId = `${site.url}/#website`;
 
 const postalAddress = {
@@ -16,18 +16,16 @@ export function templeJsonLd() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["HinduTemple", "PlaceOfWorship", "LocalBusiness"],
+        "@type": ["NGO", "Organization"],
         "@id": templeId,
         name: site.name,
         alternateName: [
           "Radha Sarveshvar Heritage Centre",
-          "Radha Sarveshwar Mandir",
         ],
         description: site.description,
         slogan: site.slogan,
         url: site.url,
         image: [
-          `${site.url}/images/mandir-exterior.jpg`,
           `${site.url}/og.jpg`,
           `${site.url}/images/logo.png`,
         ],
@@ -35,25 +33,6 @@ export function templeJsonLd() {
         email: site.email,
         telephone: site.phones.map((p) => p.tel),
         address: postalAddress,
-        hasMap: site.address.googleListingUrl,
-        sameAs: [
-          site.address.googleListingUrl,
-          `https://www.google.com/search?kgmid=${encodeURIComponent(site.address.googleKnowledgeGraphId)}&q=${encodeURIComponent(site.name)}`,
-        ],
-        openingHoursSpecification: {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday",
-          ],
-          opens: site.hours.opens,
-          closes: site.hours.closes,
-        },
         areaServed: [
           ...site.serviceArea.cities.map((name) => ({ "@type": "City", name })),
           ...site.serviceArea.regions.map((name) => ({
@@ -68,9 +47,7 @@ export function templeJsonLd() {
           jobTitle: site.pandit.jobTitle,
           image: `${site.url}${site.pandit.image}`,
         },
-        isAccessibleForFree: true,
-        publicAccess: true,
-        currenciesAccepted: "CAD",
+        nonprofitStatus: "NonprofitType",
         contactPoint: [
           {
             "@type": "ContactPoint",
@@ -107,7 +84,7 @@ export function breadcrumbJsonLd(name: string, path: string) {
 
 export function festivalEventsJsonLd() {
   const location = {
-    "@type": "HinduTemple",
+    "@type": "Place",
     name: site.name,
     address: postalAddress,
   };
@@ -121,7 +98,7 @@ export function festivalEventsJsonLd() {
       endDate: event.date,
       eventStatus: "https://schema.org/EventScheduled",
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-      description: `${event.en} celebration at ${site.name}, a Hindu temple near Brampton, Ontario. All devotees are welcome.`,
+      description: `${event.en} celebration at ${site.name}, a non-profit for Sanatan Dharma in Ontario.`,
       image: [`${site.url}/images/calendar-2026.png`],
       isAccessibleForFree: true,
       location,
@@ -144,7 +121,7 @@ export function templeEventsJsonLd() {
       image: [`${site.url}${event.poster.src}`],
       isAccessibleForFree: true,
       location: {
-        "@type": "HinduTemple",
+        "@type": "Place",
         name: site.name,
         address: postalAddress,
       },
