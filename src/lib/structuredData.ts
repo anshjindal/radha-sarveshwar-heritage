@@ -7,10 +7,7 @@ const websiteId = `${site.url}/#website`;
 
 const postalAddress = {
   "@type": "PostalAddress",
-  streetAddress: site.address.line1,
-  addressLocality: site.address.city,
   addressRegion: site.address.regionCode,
-  postalCode: site.address.postal,
   addressCountry: site.address.countryCode,
 };
 
@@ -25,7 +22,6 @@ export function templeJsonLd() {
         alternateName: [
           "Radha Sarveshvar Heritage Centre",
           "Radha Sarveshwar Mandir",
-          "RSHC Norval",
         ],
         description: site.description,
         slogan: site.slogan,
@@ -39,11 +35,6 @@ export function templeJsonLd() {
         email: site.email,
         telephone: site.phones.map((p) => p.tel),
         address: postalAddress,
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: site.geo.latitude,
-          longitude: site.geo.longitude,
-        },
         hasMap: site.address.googleListingUrl,
         sameAs: [
           site.address.googleListingUrl,
@@ -130,7 +121,7 @@ export function festivalEventsJsonLd() {
       endDate: event.date,
       eventStatus: "https://schema.org/EventScheduled",
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-      description: `${event.en} celebration at ${site.name}, a Hindu temple in Norval, Halton Hills near Brampton, Ontario. All devotees are welcome.`,
+      description: `${event.en} celebration at ${site.name}, a Hindu temple near Brampton, Ontario. All devotees are welcome.`,
       image: [`${site.url}/images/calendar-2026.png`],
       isAccessibleForFree: true,
       location,

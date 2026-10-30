@@ -84,13 +84,13 @@ export function PranPratishtha({ event }: { event: TempleEvent }) {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
             <Link
-              href="/events"
+              href="/#events"
               className="rounded-full bg-gold px-6 py-3 text-sm font-semibold tracking-wide text-maroon-deep uppercase hover:bg-gold-light"
             >
               {t("pranPratishtha.postersCta")}
             </Link>
             <a
-              href={site.address.directionsUrl}
+              href={site.address.googleListingUrl}
               target="_blank"
               rel="noopener"
               className="rounded-full border border-cream/50 px-6 py-3 text-sm font-semibold tracking-wide text-cream uppercase hover:border-gold hover:text-gold-light"

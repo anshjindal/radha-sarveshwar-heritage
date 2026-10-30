@@ -88,11 +88,6 @@ export function Footer() {
           <p className="text-xs font-bold tracking-[0.2em] text-gold uppercase">
             {t("footer.getInTouch")}
           </p>
-          <address className="mt-4 text-sm not-italic text-cream/80">
-            {site.address.line1}
-            <br />
-            {site.address.line2}
-          </address>
           <div className="mt-4 space-y-1 text-sm">
             {site.phones.map((phone) => (
               <p key={phone.id}>

@@ -6,7 +6,7 @@ import { breadcrumbJsonLd, festivalEventsJsonLd } from "@/lib/structuredData";
 
 export const metadata = pageMetadata({
   title: `Hindu Festival Calendar ${calendarYear}`,
-  description: `${calendarYear} Shradh, Navratri, Dussehra, Karva Chauth, Diwali and Tulsi Vivah dates at our Hindu temple in Halton Hills near Brampton, Ontario.`,
+  description: `${calendarYear} Shradh, Navratri, Dussehra, Karva Chauth, Diwali and Tulsi Vivah dates at our Hindu temple near Brampton, Ontario.`,
   path: "/calendar",
   image: { url: calendarPoster, width: 682, height: 1024 },
 });

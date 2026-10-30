@@ -46,12 +46,6 @@ export function Contact() {
             <p className="text-xs tracking-[0.18em] text-maroon uppercase">
               {t("contact.location")}
             </p>
-            <address className="mt-3 not-italic">
-              <p className="text-lg font-semibold text-maroon">
-                {site.address.line1}
-              </p>
-              <p className="text-ink/75">{site.address.line2}</p>
-            </address>
             <a
               href={site.address.googleListingUrl}
               target="_blank"
@@ -88,30 +82,11 @@ export function Contact() {
             {t("contact.openGoogleListing")}
           </a>
           <a
-            href={site.address.directionsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-maroon/20 px-5 py-2.5 text-sm font-medium text-maroon hover:border-gold"
-          >
-            {t("contact.getDirections")}
-          </a>
-          <a
             href={site.phones[0].href}
             className="rounded-full border border-maroon/20 px-5 py-2.5 text-sm font-medium text-maroon hover:border-gold"
           >
             {t("contact.call", { phone: site.phones[0].display })}
           </a>
-        </div>
-
-        <div className="mt-8 overflow-hidden rounded-2xl border border-gold/30 shadow-lg">
-          <iframe
-            title={t("contact.mapTitle")}
-            src={site.address.embedUrl}
-            className="h-[380px] w-full border-0 md:h-[460px]"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            allowFullScreen
-          />
         </div>
       </div>
     </section>

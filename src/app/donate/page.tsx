@@ -5,7 +5,7 @@ import { breadcrumbJsonLd } from "@/lib/structuredData";
 
 export const metadata = pageMetadata({
   title: "Donate to Our Hindu Temple",
-  description: `Donate to our Hindu temple in Halton Hills near Brampton — support the mandir renovation, 22 murtis from Jaipur, daily puja and festivals.`,
+  description: `Donate to our Hindu temple near Brampton — support the mandir renovation, 22 murtis from Jaipur, daily puja and festivals.`,
   path: "/donate",
 });
 

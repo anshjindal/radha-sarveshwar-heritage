@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { PranPratishtha } from "@/components/PranPratishtha";
 import { ServiceArea } from "@/components/ServiceArea";
 import { events } from "@/lib/events";
-import { templeJsonLd } from "@/lib/structuredData";
+import { templeEventsJsonLd, templeJsonLd } from "@/lib/structuredData";
 
 const pranPratishtha = events.find(
   (e) => e.slug === "grand-pran-pratishtha-2026",
@@ -15,6 +15,7 @@ export default function Home() {
   return (
     <>
       <JsonLd data={templeJsonLd()} />
+      <JsonLd data={templeEventsJsonLd()} />
       <main>
         <Hero />
         {pranPratishtha ? <PranPratishtha event={pranPratishtha} /> : null}

@@ -33,7 +33,7 @@ export function Header() {
               {site.name}
             </span>
             <span className="block text-xs text-maroon/70">
-              {site.hindiSlogan} · {site.address.city}, {site.address.region}
+              {site.hindiSlogan} · {site.address.region}
             </span>
           </span>
         </Link>

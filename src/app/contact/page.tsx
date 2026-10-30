@@ -6,7 +6,7 @@ import { breadcrumbJsonLd } from "@/lib/structuredData";
 
 export const metadata = pageMetadata({
   title: "Contact & Directions",
-  description: `Directions to our Hindu temple at ${site.address.line1}, Norval — minutes from Brampton and Georgetown. Open daily ${site.hours.time}. Call ${site.phones[0].display}.`,
+  description: `Contact our Hindu temple near Brampton and Georgetown. Open daily ${site.hours.time}. Call ${site.phones[0].display}.`,
   path: "/contact",
 });
 

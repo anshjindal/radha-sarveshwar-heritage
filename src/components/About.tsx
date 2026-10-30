@@ -27,9 +27,6 @@ export function About() {
             <p className="mt-6 text-sm font-semibold tracking-wide text-maroon uppercase">
               {t("common.hoursLabel")}: {site.hours.time}
             </p>
-            <p className="mt-2 text-sm text-ink/70">
-              {site.address.line1}, {site.address.line2}
-            </p>
           </div>
           <Image
             src="/images/mandir-exterior.jpg"

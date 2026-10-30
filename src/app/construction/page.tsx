@@ -5,7 +5,7 @@ import { breadcrumbJsonLd } from "@/lib/structuredData";
 
 export const metadata = pageMetadata({
   title: "Mandir Development",
-  description: `Building a home for Radha Sarveshwar in Halton Hills, near Brampton: our journey from 2022 to puja beginning in March 2026, 22 murtis arriving from Jaipur and new parking for devotees.`,
+  description: `Building a home for Radha Sarveshwar near Brampton: our journey from 2022 to puja beginning in March 2026, 22 murtis arriving from Jaipur and new parking for devotees.`,
   path: "/construction",
   image: {
     url: "/images/construction/murti-arrival-1.png",

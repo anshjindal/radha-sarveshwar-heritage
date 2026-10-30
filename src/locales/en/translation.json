@@ -21,10 +21,10 @@
   },
   "hero": {
     "welcome": "Welcome to",
-    "body": "A Hindu temple and heritage centre in Norval, Halton Hills — just minutes from Brampton and Georgetown — for worship, festivals and Sanatan Dharma across the GTA and Southern Ontario.",
+    "body": "A Hindu temple and heritage centre just minutes from Brampton and Georgetown — for worship, festivals and Sanatan Dharma across the GTA and Southern Ontario.",
     "aboutCta": "About us",
     "visitCta": "Visit",
-    "imageAlt": "Radha Sarveshwar Heritage Centre temple grounds in Norval, Ontario"
+    "imageAlt": "Radha Sarveshwar Heritage Centre temple grounds in Ontario"
   },
   "pranPratishtha": {
     "eyebrow": "Mandir inauguration",
@@ -39,10 +39,10 @@
   },
   "about": {
     "eyebrow": "About us",
-    "title": "Hindu temple in Norval, Ontario",
-    "p1": "Radha Sarveshwar Heritage Centre is a Hindu temple and cultural home in Norval, Halton Hills. Dedicated to Shri Radha Sarveshwar, we welcome devotees from across the Greater Toronto Area for worship, festivals, and community.",
+    "title": "Hindu temple in Ontario",
+    "p1": "Radha Sarveshwar Heritage Centre is a Hindu temple and cultural home near Brampton, Ontario. Dedicated to Shri Radha Sarveshwar, we welcome devotees from across the Greater Toronto Area for worship, festivals, and community.",
     "p2": "Our purpose is to preserve and share Sanatan Dharma — a place where families can gather, children can grow in culture, and visitors can find peace.",
-    "imageAlt": "Radha Sarveshwar Heritage Centre mandir building and grounds in Norval, Ontario",
+    "imageAlt": "Radha Sarveshwar Heritage Centre mandir building and grounds in Ontario",
     "pandit": {
       "eyebrow": "Our resident pandit",
       "name": "Pandit Mahesh Kumar Acharya",
@@ -99,14 +99,14 @@
   "construction": {
     "eyebrow": "Mandir development",
     "title": "Building a Temple",
-    "body": "Radha Sarveshwar Heritage Centre is being developed as a place of worship, seva, community, and cultural heritage in Halton Hills.\n\nThe journey began several years ago with a vision shared by devotees to establish a dedicated spiritual centre. Over time, that vision found a new beginning, and the project is now steadily taking shape through the blessings, the dedication of devotees, and the continued support of the community.",
+    "body": "Radha Sarveshwar Heritage Centre is being developed as a place of worship, seva, community, and cultural heritage.\n\nThe journey began several years ago with a vision shared by devotees to establish a dedicated spiritual centre. Over time, that vision found a new beginning, and the project is now steadily taking shape through the blessings, the dedication of devotees, and the continued support of the community.",
     "timelineTitle": "Our Journey",
     "latest": "Latest",
     "upcoming": "Upcoming",
     "milestones": {
       "visionBegins": {
         "title": "The Vision Begins",
-        "body": "The property of 1 acre in Halton Hills was acquired with the vision of establishing a mandir and community centre.\n\nThe project remained on hold for several years while circumstances evolved."
+        "body": "A 1-acre property was acquired with the vision of establishing a mandir and community centre.\n\nThe project remained on hold for several years while circumstances evolved."
       },
       "siteVisit": {
         "title": "A New Beginning",
@@ -168,7 +168,7 @@
     "mapTitle": "Map to Radha Sarveshwar Heritage Centre"
   },
   "footer": {
-    "blurb": "A Hindu temple and cultural centre in Norval, Halton Hills, welcoming devotees from Brampton, Georgetown, Mississauga, Milton, Caledon and across Southern Ontario.",
+    "blurb": "A Hindu temple and cultural centre welcoming devotees from Brampton, Georgetown, Mississauga, Milton, Caledon and across Southern Ontario.",
     "navigation": "Navigation",
     "getInTouch": "Get in touch",
     "daily": "Daily {{hours}}",
@@ -333,8 +333,8 @@
   },
   "serviceArea": {
     "eyebrow": "Visit us",
-    "title": "A Hindu temple near Brampton and Halton Hills",
-    "body": "Radha Sarveshwar Heritage Centre is on Tenth Line North in Norval, between Brampton and Georgetown. Devotees come from across Peel, Halton, the Greater Toronto Area and Southern Ontario for darshan, puja and festivals.",
+    "title": "A Hindu temple near Brampton",
+    "body": "Radha Sarveshwar Heritage Centre is located between Brampton and Georgetown. Devotees come from across Peel, the Greater Toronto Area and Southern Ontario for darshan, puja and festivals.",
     "directionsCta": "Get directions"
   }
 }

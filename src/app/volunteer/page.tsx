@@ -5,7 +5,7 @@ import { breadcrumbJsonLd } from "@/lib/structuredData";
 
 export const metadata = pageMetadata({
   title: "Volunteer at Our Hindu Temple",
-  description: `Volunteer at our Hindu temple in Halton Hills near Brampton — temple seva, festivals, langar kitchen, renovation help, youth programs and outreach.`,
+  description: `Volunteer at our Hindu temple near Brampton — temple seva, festivals, langar kitchen, renovation help, youth programs and outreach.`,
   path: "/volunteer",
 });
 

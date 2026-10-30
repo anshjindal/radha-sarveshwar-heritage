@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useSyncExternalStore } from "react";
 import { useTranslation } from "react-i18next";
 import {
@@ -153,16 +152,7 @@ export function Events({
           <p className="mt-6 text-ink/75">{t("events.none")}</p>
         )}
 
-        {upcomingOnly ? (
-          <p className="mt-10 text-center">
-            <Link
-              href="/events"
-              className="inline-flex items-center rounded-full border border-maroon/25 px-5 py-2 text-sm font-medium text-maroon hover:border-gold hover:text-gold"
-            >
-              {t("events.seeAll")}
-            </Link>
-          </p>
-        ) : past.length > 0 ? (
+        {upcomingOnly ? null : past.length > 0 ? (
           <>
             <h2 className="mt-16 text-2xl font-semibold text-maroon">
               {t("events.past")}

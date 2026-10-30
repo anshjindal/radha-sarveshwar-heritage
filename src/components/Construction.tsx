@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { todayInToronto } from "@/lib/events";
+import { site } from "@/lib/site";
 
 const subscribe = () => () => {};
 
@@ -304,12 +304,14 @@ export function Construction() {
             {t("construction.closingTagline")}
           </p>
           <p className="mt-10">
-            <Link
-              href="/contact"
+            <a
+              href={site.address.googleListingUrl}
+              target="_blank"
+              rel="noopener"
               className="inline-flex items-center rounded-full bg-maroon px-6 py-2.5 text-sm font-medium tracking-wide text-cream uppercase hover:bg-maroon-deep"
             >
               {t("construction.visitCta")}
-            </Link>
+            </a>
           </p>
         </div>
       </section>

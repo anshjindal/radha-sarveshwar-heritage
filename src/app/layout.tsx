@@ -14,7 +14,7 @@ const sourceSans = Source_Sans_3({
   display: "swap",
 });
 
-const titleDefault = `${site.name} | Hindu Temple near Brampton & Halton Hills`;
+const titleDefault = `${site.name} | Hindu Temple near Brampton`;
 
 export const viewport: Viewport = {
   themeColor: "#4a121c",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: `${site.name} — Hindu temple in Norval, Halton Hills near Brampton, Ontario`,
+        alt: `${site.name} — Hindu temple near Brampton, Ontario`,
       },
     ],
   },
@@ -87,9 +87,6 @@ export const metadata: Metadata = {
   },
   other: {
     "geo.region": "CA-ON",
-    "geo.placename": "Norval",
-    "geo.position": `${site.geo.latitude};${site.geo.longitude}`,
-    ICBM: `${site.geo.latitude}, ${site.geo.longitude}`,
   },
 };
 

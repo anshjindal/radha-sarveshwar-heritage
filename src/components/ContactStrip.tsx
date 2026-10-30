@@ -42,8 +42,15 @@ export function ContactStrip({ heading }: { heading: string }) {
           <dt className="text-xs tracking-[0.18em] text-ink/60 uppercase">
             {t("contact.location")}
           </dt>
-          <dd className="text-ink/80">
-            {site.address.line1}, {site.address.line2}
+          <dd>
+            <a
+              href={site.address.googleListingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-ink/80 hover:text-gold"
+            >
+              {t("contact.viewOnGoogle")}
+            </a>
           </dd>
           <dd className="text-ink/60">
             {t("common.hoursLabel")}: {site.hours.time}

@@ -21,7 +21,7 @@ export function ServiceArea() {
         <div className="gold-rule mx-auto my-6 max-w-xs" />
         <p className="leading-7 text-ink/80">{t("serviceArea.body")}</p>
         <a
-          href={site.address.directionsUrl}
+          href={site.address.googleListingUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-8 inline-flex items-center rounded-full bg-maroon px-6 py-2.5 text-sm font-medium tracking-wide text-cream uppercase hover:bg-maroon-deep"

@@ -6,7 +6,7 @@ import { breadcrumbJsonLd, templeEventsJsonLd } from "@/lib/structuredData";
 export const metadata = pageMetadata({
   title: "Events & Programs",
   description:
-    "Upcoming events, pujas and celebrations at Radha Sarveshwar Heritage Centre, a Hindu temple in Norval, Halton Hills near Brampton, Ontario — including the October 2026 inauguration and Pran Pratishtha.",
+    "Upcoming events, pujas and celebrations at Radha Sarveshwar Heritage Centre, a Hindu temple near Brampton, Ontario — including the October 2026 inauguration and Pran Pratishtha.",
   path: "/events",
   image: {
     url: "/images/events/grand-pran-pratishtha-2026-en.png",

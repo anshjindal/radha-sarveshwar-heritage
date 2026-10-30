@@ -5,7 +5,7 @@ import { breadcrumbJsonLd } from "@/lib/structuredData";
 
 export const metadata = pageMetadata({
   title: "Sponsor a Puja or Festival",
-  description: `Sponsor a festival, bhog, bhandara or murti shringar at our Hindu temple in Halton Hills near Brampton, in your family's name or a loved one's memory.`,
+  description: `Sponsor a festival, bhog, bhandara or murti shringar at our Hindu temple near Brampton, in your family's name or a loved one's memory.`,
   path: "/sponsorship",
 });
 

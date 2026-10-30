@@ -4,7 +4,7 @@ export type NavGroup = { key: string; items: NavLink[] };
 export const navigation: (NavLink | NavGroup)[] = [
   { href: "/", key: "home" },
   { href: "/about", key: "about" },
-  { href: "/events", key: "events" },
+  // Hidden for now: { href: "/events", key: "events" },
   {
     key: "mandir",
     items: [
@@ -26,7 +26,7 @@ export const navigation: (NavLink | NavGroup)[] = [
       { href: "/sponsorship", key: "sponsorship" },
     ],
   },
-  { href: "/contact", key: "contact" },
+  // Hidden for now: { href: "/contact", key: "contact" },
 ];
 
 export const donateHref = "/donate";

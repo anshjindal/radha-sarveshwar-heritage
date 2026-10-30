@@ -6,7 +6,7 @@ import { breadcrumbJsonLd } from "@/lib/structuredData";
 
 export const metadata = pageMetadata({
   title: "Puja Booking & Pandit Services near Brampton",
-  description: `Book Rudra Abhishek, havan, Satyanarayan Katha, shradh, griha pravesh and sanskar pujas with our pandit in Halton Hills near Brampton. Pooja samagri lists included.`,
+  description: `Book Rudra Abhishek, havan, Satyanarayan Katha, shradh, griha pravesh and sanskar pujas with our pandit near Brampton. Pooja samagri lists included.`,
   path: "/seva",
 });
 

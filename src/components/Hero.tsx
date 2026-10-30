@@ -43,12 +43,14 @@ export function Hero() {
           >
             {t("hero.aboutCta")}
           </Link>
-          <Link
-            href="/contact"
+          <a
+            href={site.address.googleListingUrl}
+            target="_blank"
+            rel="noopener"
             className="rounded-full border border-cream/50 px-6 py-3 text-sm font-semibold tracking-wide text-cream uppercase hover:border-gold hover:text-gold-light"
           >
             {t("hero.visitCta")}
-          </Link>
+          </a>
         </div>
       </div>
     </section>
